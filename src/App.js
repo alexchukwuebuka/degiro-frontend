@@ -56,8 +56,8 @@ function App() {
   }, [])
 
 
-  // const route = 'https://degiro-backend.vercel.app'
-  const route = 'http://localhost:5001'
+  const route = 'https://degiro-backend.vercel.app'
+  // const route = 'http://localhost:5001'
 
   return (
     <>
