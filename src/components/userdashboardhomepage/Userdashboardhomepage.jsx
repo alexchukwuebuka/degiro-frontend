@@ -149,7 +149,7 @@ const Userdashboardhomepage = ({ route }) => {
                 Total Balance
               </h2>
               <div className="amount">
-                <h3>${userData ? formatCurrency(userData.funded) : '0'}</h3>
+                <h3>${userData ? `${formatCurrency(userData.funded)}.00` : '0.00'}</h3>
                 <span className="usd-btn">usd</span>
               </div>
             </div>
@@ -171,7 +171,7 @@ const Userdashboardhomepage = ({ route }) => {
               </div>
               <div className="lower-card-text-container">
                 <h3>total deposit</h3>
-                <p>${userData ? formatCurrency(userData.totaldeposit) : '0'}</p>
+                <p>${userData ? `${formatCurrency(userData.totaldeposit)}.00` : '0.00'}</p>
               </div>
             </div>
             <div className="lower-overview-card">
@@ -180,7 +180,7 @@ const Userdashboardhomepage = ({ route }) => {
               </div>
               <div className="lower-card-text-container">
                 <h3>total withdrawal</h3>
-                <p>${userData ? formatCurrency(userData.totalwithdraw) : '0'}</p>
+                <p>${userData ? `${formatCurrency(userData.totalwithdraw)}.00` : '0.00'}</p>
               </div>
             </div>
           </div>
@@ -189,49 +189,6 @@ const Userdashboardhomepage = ({ route }) => {
         <div className="dashboard-chart-container">
           <TeslaWidget />
         </div>
-        {/* <div className="referral-section">
-                <div className="referral-card1">
-                    <div className="referraltext-wrapper">
-                        <div className="referral-text-container">
-                            <h2>refer us and earn 10% of every downline deposit</h2>
-                            <p>Use the bellow link to invite your friends.</p>
-                        </div>
-                        <button className="invite-btn">invite</button>
-                    </div>
-                    <div className="click-to-copy-container">
-                        <span className='clipboard-btn'>
-                            <FiLink />
-                        </span>
-                        <input type="text" value={userData ? `www.apexcopytrade.com/user/${userData.username ? userData.username : userData.referral}` : ''} ref={clipRef}/>
-                        <span className={`clipboard-btn ${clipBoard ? <MdOutlineDone /> : ''}` } onClick={()=>{
-                            copy()
-                            setClipBoard(!clipBoard)
-                              }}>   
-                            {
-                                clipBoard ?
-                                <MdOutlineDone /> : <MdOutlineContentCopy />
-                            }
-                        </span>
-                    </div>  
-                </div>
-                <div className="referral-card1">
-                    <div className="referraltext-wrapper">
-                        <div className="referral-text-container">
-                            <h2>my referral</h2>
-                        </div>
-                        <div className="referral-text-container small-card">
-                            <h2>{userData ? userData.referred.length : '      '}</h2>
-                            <p>referred users</p>
-                        </div>
-                        <div className="referral-text-container small-card">
-                            <h2>{userData ? userData.refBonus : '        '} USD</h2>
-                            <p>referral commission</p>
-                        </div>
-
-                    </div>
-                    <img src="/bar4.png" alt="" className="bar4" />
-                </div>
-            </div> */}
         <div className="current-rank-section">
           <div className="active-trader-container">
             <div className="videoframe-text-container treader-header">
