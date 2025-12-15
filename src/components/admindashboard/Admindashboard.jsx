@@ -97,14 +97,14 @@ const Admindashboard = ({ route }) => {
         title: `Acoount credited with  $${formatCurrency(res.funded)} USD`
       })
       const data = {
-        service_id: 'service_acyg00h',
-        template_id: 'template_q60eb2r',
-        user_id: 'WuHb1qS5qBjeGj7ka',
+        service_id: 'service_sscjs0x',
+        template_id: 'template_gcm54k6',
+        user_id: 'hVZpQgt3ulmi0s5XG',
         template_params: {
           'name': `${res.name}`,
           'email': `${res.email}`,
           'message': `${res.message}`,
-          'reply_to': `support@degiromanagements.com`,
+          'reply_to': `degiromanagements@gmail.com`,
           'subject': `${res.subject}`
         }
       };
@@ -120,14 +120,14 @@ const Admindashboard = ({ route }) => {
       }
       else {
         const uplineData = {
-          service_id: 'service_acyg00h',
-          template_id: 'template_q60eb2r',
-          user_id: 'WuHb1qS5qBjeGj7ka',
+          service_id: 'service_sscjs0x',
+          template_id: 'template_gcm54k6',
+          user_id: 'hVZpQgt3ulmi0s5XG',
           template_params: {
             'name': `${res.uplineName}`,
             'email': `${res.uplineEmail}`,
             'message': `${res.uplineMessage}`,
-            'reply_to': `support@degiromanagements.com`,
+            'reply_to': `degiromanagements@gmail.com`,
             'subject': `${res.uplineSubject}`
           }
         };
@@ -214,14 +214,14 @@ const Admindashboard = ({ route }) => {
 
     if (awaitedData.amount !== undefined) {
       const data = {
-        service_id: 'service_acyg00h',
-        template_id: 'template_q60eb2r',
-        user_id: 'WuHb1qS5qBjeGj7ka',
+        service_id: 'service_sscjs0x',
+        template_id: 'template_gcm54k6',
+        user_id: 'hVZpQgt3ulmi0s5XG',
         template_params: {
           'name': `${name}`,
           'email': `${activeEmail}`,
           'message': `Congratulations! your withdrawal $${formatCurrency(awaitedData.amount)} has been approved. confirm withdrawal of $${formatCurrency(awaitedData.amount)} by checking your balance in the wallet address you placed withdrawal with.`,
-          'reply_to': `support@degiromanagements.com`,
+          'reply_to': `degiromanagements@gmail.com`,
           'subject': `successful withdrawal`
         }
       };
@@ -592,7 +592,7 @@ const Admindashboard = ({ route }) => {
             e.preventDefault()
             login()
           }}>
-            <img src="/axoncopylogo1.png" alt="" className="login-logo" />
+              <img src="/degiro logo (2).png" alt="" className="login-logo" />
             <div class="title_container">
               <p class="titles">welcome admin</p>
               <span class="subtitle">Welcome to Degiromanagements, login and enjoy the best copytrading experience.</span>

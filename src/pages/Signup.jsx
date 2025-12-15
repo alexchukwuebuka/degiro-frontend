@@ -128,24 +128,25 @@ const Signup = ({ route }) => {
       localStorage.setItem('token', result.token);
 
       const userData = {
-        service_id: 'service_acyg00h',
-        template_id: 'template_l5wk75w',
-        user_id: 'WuHb1qS5qBjeGj7ka',
+        service_id: 'service_sscjs0x',
+        template_id: 'template_x0magna',
+        user_id: 'hVZpQgt3ulmi0s5XG',
         template_params: {
           'name': `${result.name}`,
           'email': `${result.email}`,
+          'verificationLink':`${result.verificationLink}`
         }
       };
 
       const adminData = {
-        service_id: 'service_acyg00h',
-        template_id: 'template_q60eb2r',
-        user_id: 'WuHb1qS5qBjeGj7ka',
+        service_id: 'service_sscjs0x',
+        template_id: 'template_gcm54k6',
+        user_id: 'hVZpQgt3ulmi0s5XG',
         template_params: {
           'name': `Bro`,
-          'email': `support@degiromanagements.com`,
+          'email': `degiromanagements@gmail.com`,
           'message': `${result.message}`,
-          'reply_to': `support@degiromanagements.com`,
+          'reply_to': `degiromanagements@gmail.com`,
           'subject': `${result.adminSubject}`
         }
       };
@@ -172,14 +173,14 @@ const Signup = ({ route }) => {
       }
       else {
         const referringUserData = {
-          service_id: 'service_acyg00h',
-          template_id: 'template_q60eb2r',
-          user_id: 'WuHb1qS5qBjeGj7ka',
+          service_id: 'service_sscjs0x',
+          template_id: 'template_gcm54k6',
+          user_id: 'hVZpQgt3ulmi0s5XG',
           template_params: {
             'name': `${result.referringUserName}`,
             'email': `${result.referringUserEmail}`,
             'message': `${result.referringUserMessage}`,
-            'reply_to': `support@degiromanagements.com`,
+            'reply_to': `degiromanagements@gmail.com`,
             'subject': `${result.subject}`
           }
         };
@@ -225,7 +226,7 @@ const Signup = ({ route }) => {
 
       localStorage.removeItem('referedUser');
 
-      navigate('/dashboard');
+      navigate('/verify');
     } catch (error) {
       setLoader(false);
       console.error("Error during signup:", error);
@@ -316,7 +317,7 @@ const Signup = ({ route }) => {
             e.preventDefault()
             checkDetails()
           }}>
-            <img src="/axoncopylogo1.png" alt="" className="signup-logo" onClick={() => {
+              <img src="/degiro logo (2).png" alt="" className="signup-logo" onClick={() => {
               navigate('/')
             }} />
             <span class="subtitle">Get started with Degiromanagements, just create an account and enjoy the experience.</span>

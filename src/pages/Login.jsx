@@ -102,7 +102,7 @@ const Login = ({ route }) => {
           e.preventDefault()
           login()
         }}>
-          <img src="/axoncopylogo1.png" alt="" className="login-logo" onClick={() => {
+          <img src="/degiro logo (2).png" alt="" className="login-logo" onClick={() => {
             navigate('/')
           }} />
           <div class="title_container">

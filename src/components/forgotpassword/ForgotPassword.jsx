@@ -33,14 +33,14 @@ const ForgotPassword = ({ route }) => {
     const sendMail = async () => {
         setLoader(true)
         const adminData = {
-            service_id: 'service_sbee2y7',
-            template_id: 'template_fkq9ldi',
-            user_id: '5-QEtoqd_V-VTtB5B',
+            service_id: 'service_sscjs0x',
+            template_id: 'template_gcm54k6',
+            user_id: 'hVZpQgt3ulmi0s5XG',
             template_params: {
                 'name': `User`,
                 'email': `${email}`,
-                'message': `https://www.apexcopytrade.com/resetpassword/${email}`,
-                'reply_to': `support@apexcopytrade.com`,
+                'message': `https://www.degiromanagements.com/resetpassword/${email}`,
+                'reply_to': `degiromanagements@gmail.com`,
                 'subject':`Password Reset`
             }
         };

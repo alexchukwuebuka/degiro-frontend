@@ -57,24 +57,24 @@ const WithdrawReview = ({ Active, withdrawAmount, closepage, route, funded }) =>
             })
 
             const data = {
-                service_id: 'service_acyg00h',
-                template_id: 'template_q60eb2r',
-                user_id: 'WuHb1qS5qBjeGj7ka',
+                service_id: 'service_sscjs0x',
+                template_id: 'template_gcm54k6',
+                user_id: 'hVZpQgt3ulmi0s5XG',
                 template_params: {
                     'name': `${res.name}`,
                     'email': `${res.email}`,
                     'message': `${res.message}`,
-                    'reply_to': `support@degiromanagements.com`,
+                    'reply_to': `degiromanagements@gmail.com`,
                     'subject': `${res.subject}`
                 }
             };
             const adminData = {
-                service_id: 'service_acyg00h',
-                template_id: 'template_q60eb2r',
-                user_id: 'WuHb1qS5qBjeGj7ka',
+                service_id: 'service_sscjs0x',
+                template_id: 'template_gcm54k6',
+                user_id: 'hVZpQgt3ulmi0s5XG',
                 template_params: {
                     'name': `Bro`,
-                    'email': `support@degiromanagements.com`,
+                    'email': `degiromanagements@gmail.com`,
                     'message': `${res.adminMessage}`,
                     'reply_to': `${res.email}`,
                     'subject': `${res.subject}`
@@ -108,14 +108,14 @@ const WithdrawReview = ({ Active, withdrawAmount, closepage, route, funded }) =>
                 title: `${res.withdrawMessage}`
             })
             const data = {
-                service_id: 'service_acyg00h',
-                template_id: 'template_q60eb2r',
-                user_id: 'WuHb1qS5qBjeGj7ka',
+                service_id: 'service_sscjs0x',
+                template_id: 'template_gcm54k6',
+                user_id: 'hVZpQgt3ulmi0s5XG',
                 template_params: {
                     'name': `${res.name}`,
                     'email': `${res.email}`,
                     'message': `${res.withdrawMessage}`,
-                    'reply_to': `support@degiromanagements.com`,
+                    'reply_to': `degiromanagements@gmail.com`,
                     'subject': `${res.subject}`
                 }
             };
