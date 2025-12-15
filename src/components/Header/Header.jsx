@@ -83,7 +83,7 @@ const Header = () => {
                 </div>
                 <div className="menu-card">
                     <div className="menu-card-image-conatiner">
-                        <img src="/axoncopylogo1.png" alt="" className='mobile-logo'/> 
+                        <img src="/degiro logo (2).png" alt="" className='mobile-logo'/> 
                     </div>
                     <ul className="list">
                         <li className="element"><Link to='/'>home</Link></li>
