@@ -5,9 +5,9 @@ const TypoAnime = () => {
       sequence={[
         'cryptocurrencies...',
         1000, 
-        'foreign exchange...',
+        'forex...',
         1000,
-        'copy trading...',
+        'options...',
         1000,
         'stocks $ ETFs...',
         1000

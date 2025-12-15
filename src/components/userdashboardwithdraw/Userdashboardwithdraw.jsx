@@ -68,15 +68,8 @@ const Userdashboardwithdraw = ({route}) => {
       id:3,
       min:10,
       max:1000000,
-      image:'/tron.png',
-      method:'tether(TRC20)',
-    },
-    {
-      id:7,
-      min:10,
-      max:1000000,
-      image:'/usdc-coin.png',
-      method:'USDC (ETH Network)',
+      image:'/solana.png',
+      method:'USDT(SOL)',
     },
     {
       id:4,
@@ -84,13 +77,6 @@ const Userdashboardwithdraw = ({route}) => {
       max:1000000,
       image:'/solana.png',
       method:'Solana (SOL) ',
-    },
-    {
-      id:5,
-      min:10,
-      max:1000000,
-      image:'/dogecoin-logo.png',
-      method:'Dodgecoin ',
     },
     {
       id:6,

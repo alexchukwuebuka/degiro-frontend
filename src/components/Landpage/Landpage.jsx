@@ -19,7 +19,7 @@ const Landpage = () => {
             transition={{ duration: 0.65, delay: 0.2 }}
           >
 
-            Innovative Copy Trading Platform for <TypoAnime />
+            Advanced Copy Trading Platform for <TypoAnime />
           </motion.h1>
           <motion.p
             initial={{ y: 45, opacity: 0 }}
