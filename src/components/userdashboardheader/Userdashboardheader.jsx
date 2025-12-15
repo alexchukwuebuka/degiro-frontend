@@ -95,6 +95,12 @@ const Userdashboardheader = ({route}) => {
                           <AiOutlineSafety />
                       </div>
                       <Link to='/kyc'>kyc verification</Link>
+                  </li>
+                   <li className="dashboard-links">
+                      <div className="dashboard-svg-container">
+                          <AiOutlineSetting />
+                      </div>
+                      <Link to='/passwordreset'>reset password</Link>
                     </li>
                     <li className="dashboard-links">
                       <div className="dashboard-svg-container">

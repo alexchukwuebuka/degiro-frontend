@@ -115,7 +115,13 @@ const MobileDropdown = ({ route, showStatus, closeMenu }) => {
                             <RiLuggageDepositLine />
                             <p>withdraw</p>
                         </div>
-                    </div>
+                        </div>
+                        <div className="dropdown-tabs" onClick={()=>{
+                    navigate('/passwordreset')
+                }}>
+                    <AiOutlineSetting />
+                    <p>password reset</p>
+                </div>
                     <div className="dropdown-tabs" onClick={() => {
                         navigate('/settings')
                     }}>
