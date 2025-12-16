@@ -855,80 +855,109 @@ const Admindashboard = ({ route }) => {
                           setActiveTrader({ ...activeTrader, pair: e.target.value })
                         } className='custom-select'
                       >
-                        <option value="">Select trade pair</option>
-
                         {/* Forex Pairs */}
-                        <optgroup label="Forex Pairs">
-                          <option value="EUR/USD">EUR/USD</option>
-                          <option value="USD/JPY">USD/JPY</option>
-                          <option value="XAU/USD">XAU/USD</option>
-                          <option value="GBP/USD">GBP/USD</option>
-                          <option value="USD/CHF">USD/CHF</option>
-                          <option value="AUD/USD">AUD/USD</option>
-                          <option value="USD/CAD">USD/CAD</option>
-                          <option value="NZD/USD">NZD/USD</option>
-                        </optgroup>
+                          <optgroup label="Forex Pairs">
+                            <option value="EUR/USD">EUR/USD</option>
+                            <option value="USD/JPY">USD/JPY</option>
+                            <option value="XAU/USD">XAU/USD</option>
+                            <option value="GBP/USD">GBP/USD</option>
+                            <option value="USD/CHF">USD/CHF</option>
+                            <option value="AUD/USD">AUD/USD</option>
+                            <option value="USD/CAD">USD/CAD</option>
+                            <option value="NZD/USD">NZD/USD</option>
+                          </optgroup>
 
-                        {/* Indices */}
-                        <optgroup label="Indices">
-                          <option value="US30">US30 (Dow Jones)</option>
-                          <option value="NAS100">NAS100 (Nasdaq 100)</option>
-                          <option value="SPX500">SPX500 (S&P 500)</option>
-                          <option value="GER40">GER40 (DAX 40)</option>
-                          <option value="UK100">UK100 (FTSE 100)</option>
-                          <option value="JPN225">JPN225 (Nikkei 225)</option>
-                          <option value="FRA40">FRA40 (CAC 40)</option>
-                          <option value="AUS200">AUS200</option>
-                        </optgroup>
+                          {/* Indices */}
+                          <optgroup label="Indices">
+                            <option value="US30">US30 (Dow Jones)</option>
+                            <option value="NAS100">NAS100 (Nasdaq 100)</option>
+                            <option value="SPX500">SPX500 (S&P 500)</option>
+                            <option value="GER40">GER40 (DAX 40)</option>
+                            <option value="UK100">UK100 (FTSE 100)</option>
+                            <option value="JPN225">JPN225 (Nikkei 225)</option>
+                            <option value="FRA40">FRA40 (CAC 40)</option>
+                            <option value="AUS200">AUS200 (ASX 200)</option>
+                            <option value="HK50">HK50 (Hang Seng)</option>
+                            <option value="EU50">EU50 (Euro Stoxx 50)</option>
+                            <option value="ES35">ES35 (IBEX 35)</option>
+                            <option value="SWI20">SWI20 (SMI)</option>
+                          </optgroup>
 
-                        {/* Cryptos */}
-                        <optgroup label="Cryptos">
-                          <option value="BTC/USD">BTC/USD</option>
-                          <option value="ETH/USD">ETH/USD</option>
-                          <option value="XRP/USD">XRP/USD</option>
-                          <option value="SOL/USD">SOL/USD</option>
-                          <option value="DOGE/USD">DOGE/USD</option>
-                          <option value="ADA/USD">ADA/USD</option>
-                          <option value="LTC/USD">LTC/USD</option>
-                          <option value="BNB/USD">BNB/USD</option>
-                          <option value="AVAX/USD">AVAX/USD</option>
-                          <option value="TRX/USD">TRX/USD</option>
-                          <option value="DOT/USD">DOT/USD</option>
-                          <option value="SHIB/USD">SHIB/USD</option>
-                          <option value="MATIC/USD">MATIC/USD</option>
-                        </optgroup>
+                          {/* Commodities */}
+                          <optgroup label="Commodities">
+                            <option value="XAU/USD">Gold</option>
+                            <option value="XAG/USD">Silver</option>
+                            <option value="WTI/USD">Crude Oil (WTI)</option>
+                            <option value="BRENT/USD">Brent Oil</option>
+                            <option value="NG/USD">Natural Gas</option>
+                            <option value="COPPER">Copper</option>
+                            <option value="CORN">Corn</option>
+                            <option value="WHEAT">Wheat</option>
+                            <option value="SOYBEAN">Soybeans</option>
+                            <option value="COFFEE">Coffee</option>
+                          </optgroup>
 
-                        {/* Stocks */}
-                        <optgroup label="Stocks">
-                          {/* Tech giants */}
-                          <option value="AAPL">AAPL (Apple)</option>
-                          <option value="GOOGL">GOOGL (Google)</option>
-                          <option value="MSFT">MSFT (Microsoft)</option>
-                          <option value="AMZN">AMZN (Amazon)</option>
-                          <option value="META">META (Meta / Facebook)</option>
-                          <option value="TSLA">TSLA (Tesla)</option>
-                          <option value="NVDA">NVDA (NVIDIA)</option>
+                          {/* Bonds */}
+                          <optgroup label="Bonds">
+                            <option value="US10Y">US 10Y Treasury</option>
+                            <option value="US30Y">US 30Y Treasury</option>
+                            <option value="US5Y">US 5Y Treasury</option>
+                            <option value="GER10Y">Germany 10Y Bund</option>
+                            <option value="UK10Y">UK 10Y Gilt</option>
+                            <option value="JP10Y">Japan 10Y Bond</option>
+                          </optgroup>
 
-                          {/* Popular US stocks */}
-                          <option value="NFLX">NFLX (Netflix)</option>
-                          <option value="AMD">AMD</option>
-                          <option value="INTC">INTC</option>
-                          <option value="BA">BA (Boeing)</option>
-                          <option value="JPM">JPM (JP Morgan)</option>
-                          <option value="V">V (Visa)</option>
-                          <option value="MA">MA (Mastercard)</option>
+                          {/* Options (Index & Asset Options) */}
+                          <optgroup label="Options">
+                            <option value="SPX_OPT">S&P 500 Options</option>
+                            <option value="NDX_OPT">Nasdaq 100 Options</option>
+                            <option value="DJI_OPT">Dow Jones Options</option>
+                            <option value="AAPL_OPT">Apple Options</option>
+                            <option value="TSLA_OPT">Tesla Options</option>
+                            <option value="BTC_OPT">Bitcoin Options</option>
+                          </optgroup>
 
-                          {/* Oil & Energy */}
-                          <option value="XOM">XOM (Exxon Mobil)</option>
-                          <option value="CVX">CVX (Chevron)</option>
+                          {/* Cryptos */}
+                          <optgroup label="Cryptos">
+                            <option value="BTC/USD">BTC/USD</option>
+                            <option value="ETH/USD">ETH/USD</option>
+                            <option value="XRP/USD">XRP/USD</option>
+                            <option value="SOL/USD">SOL/USD</option>
+                            <option value="DOGE/USD">DOGE/USD</option>
+                            <option value="ADA/USD">ADA/USD</option>
+                            <option value="LTC/USD">LTC/USD</option>
+                            <option value="BNB/USD">BNB/USD</option>
+                            <option value="AVAX/USD">AVAX/USD</option>
+                            <option value="TRX/USD">TRX/USD</option>
+                            <option value="DOT/USD">DOT/USD</option>
+                            <option value="SHIB/USD">SHIB/USD</option>
+                            <option value="MATIC/USD">MATIC/USD</option>
+                          </optgroup>
 
-                          {/* Others */}
-                          <option value="BABA">BABA (Alibaba)</option>
-                          <option value="UBER">UBER</option>
-                          <option value="DIS">DIS (Disney)</option>
-                          <option value="KO">KO (Coca-Cola)</option>
-                          <option value="NKE">NKE (Nike)</option>
-                        </optgroup>
+                          {/* Stocks */}
+                          <optgroup label="Stocks">
+                            <option value="AAPL">AAPL (Apple)</option>
+                            <option value="GOOGL">GOOGL (Google)</option>
+                            <option value="MSFT">MSFT (Microsoft)</option>
+                            <option value="AMZN">AMZN (Amazon)</option>
+                            <option value="META">META (Meta)</option>
+                            <option value="TSLA">TSLA (Tesla)</option>
+                            <option value="NVDA">NVDA (NVIDIA)</option>
+                            <option value="NFLX">NFLX (Netflix)</option>
+                            <option value="AMD">AMD</option>
+                            <option value="INTC">INTC</option>
+                            <option value="BA">BA (Boeing)</option>
+                            <option value="JPM">JPM (JP Morgan)</option>
+                            <option value="V">V (Visa)</option>
+                            <option value="MA">MA (Mastercard)</option>
+                            <option value="XOM">XOM (Exxon Mobil)</option>
+                            <option value="CVX">CVX (Chevron)</option>
+                            <option value="BABA">BABA (Alibaba)</option>
+                            <option value="UBER">UBER</option>
+                            <option value="DIS">DIS (Disney)</option>
+                            <option value="KO">KO (Coca-Cola)</option>
+                            <option value="NKE">NKE (Nike)</option>
+                          </optgroup>
 
                       </select>
 
