@@ -22,6 +22,7 @@ const UserdashboardKyc = ({ route }) => {
     dateOfBirth: '',
     nationality: '',
     city: '',
+    address: '',
     // Financial Information
     employmentStatus: '',
     occupation: '',
@@ -70,6 +71,7 @@ const UserdashboardKyc = ({ route }) => {
               dateOfBirth: data.dateOfBirth || '',
               nationality: data.nationality || '',
               city: data.city || '',
+              address: data.address || '',
               employmentStatus: data.employmentStatus || '',
               occupation: data.occupation || '',
               annualIncome: data.annualIncome || '',
@@ -260,7 +262,7 @@ const UserdashboardKyc = ({ route }) => {
             <div className="user-p-drop-icon" onClick={() => setShowMobileDropdown(!showMobileDropdown)}>
               <FaAngleDown />
             </div>
-            <MobileDropdown showStatus={showMobileDropdown} route={route} closeMenu={closeMobileMenu} />
+            
           </div>
         </div>
 
@@ -268,6 +270,7 @@ const UserdashboardKyc = ({ route }) => {
 
         {!isFormDisabled && (
           <div className="kyc-form-container">
+            <MobileDropdown showStatus={showMobileDropdown} route={route} closeMenu={closeMobileMenu} />
             <div className="kyc-form-header">
               <h2>KYC Verification</h2>
               <p>Complete all steps to verify your identity</p>
@@ -323,7 +326,7 @@ const UserdashboardKyc = ({ route }) => {
                     </div>
                     <div className="form-group full-width">
                       <label>Address</label>
-                      <input type="text" value={userData?.address || ''} disabled />
+                      <input type="text" name="address" value={formData.address} onChange={handleChange} required placeholder="Enter your full address" />
                     </div>
                   </div>
                 </div>

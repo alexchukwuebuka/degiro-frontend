@@ -181,6 +181,7 @@ const UserdashboardSettings = ({ route }) => {
     <main className='homewrapper'>
       {loader && <Loader />}
       <Userdashboardheader />
+    
       <section className='dashboardhomepage settings-page'>
         <div className="dashboardheaderwrapper">
           <div className="header-notification-icon-container">
@@ -196,11 +197,12 @@ const UserdashboardSettings = ({ route }) => {
             <div className="user-p-drop-icon" onClick={() => setShowMobileDropdown(!showMobileDropdown)}>
               <FaAngleDown />
             </div>
-            <MobileDropdown showStatus={showMobileDropdown} route={route} closeMenu={closeMobileMenu} />
+            
           </div>
         </div>
 
         <div className="settings-container">
+          <MobileDropdown showStatus={showMobileDropdown} route={route} closeMenu={closeMobileMenu} />
           <div className="settings-header">
             <h2>Account Settings</h2>
             <p>Manage your profile picture and password</p>
@@ -208,6 +210,7 @@ const UserdashboardSettings = ({ route }) => {
 
           {/* Profile Picture Section */}
           <div className="settings-card">
+              
             <h3>Profile Picture</h3>
             <div className="profile-picture-section">
               <div className="profile-picture-display">
@@ -240,9 +243,12 @@ const UserdashboardSettings = ({ route }) => {
 
           {/* Password Reset Section */}
           <div className="settings-card">
+            
             <h3>Change Password</h3>
             <form className="password-form" onSubmit={handlePasswordSubmit}>
+              
               <div className="form-group">
+                
                 <label>Current Password</label>
                 <div className="password-input-wrapper">
                   <input
