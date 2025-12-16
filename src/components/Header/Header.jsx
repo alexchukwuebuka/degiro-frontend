@@ -9,10 +9,10 @@ const Header = () => {
     const [showModal, setShowModal] = useState(false);
     const [bgColor, setBgColor] = useState(false);
     const [openDropdown, setOpenDropdown] = useState(null);
-    const [showMarkets,setShowMarkets] = useState(false)
-    const [showAnalytics,setShowAnalytics] = useState(false)
-    const [showCompany,setShowCompany] = useState(false)
-    const [showTrading,setShowTrading] = useState(false)
+    const [showMarkets, setShowMarkets] = useState(false)
+    const [showAnalytics, setShowAnalytics] = useState(false)
+    const [showCompany, setShowCompany] = useState(false)
+    const [showTrading, setShowTrading] = useState(false)
 
     const changeOnScroll = () => {
         if (window.scrollY >= 90) {
@@ -26,10 +26,10 @@ const Header = () => {
 
     const menuItems = [
         { name: "home", path: "/", dropdown: [] },
-        { name: "about", path: "/about", dropdown: [] }, 
-        { name: "markets", path: "/markets", dropdown: ["forex","futures", "indices", "stocks"] },
-        { name: "analytics", path: "/faq", dropdown: ["news", "technical-analysis","heatmaps","watchlists"] },
-        { name: "company", path: "/policy", dropdown: ["privacy-policy","team"] }
+        { name: "about", path: "/about", dropdown: [] },
+        { name: "markets", path: "/markets", dropdown: ["forex", "commodities", "bonds", "options", "futures", "indices", "stocks"] },
+        { name: "analytics", path: "/faq", dropdown: ["news", "technical-analysis", "heatmaps", "watchlists"] },
+        { name: "company", path: "/policy", dropdown: ["privacy-policy", "team"] }
     ];
 
     return (
@@ -39,7 +39,7 @@ const Header = () => {
             transition={{ duration: 0.65 }}
         >
             <div className="logo-container">
-                <img src="/degiro logo (2).png" alt="" className='txtlogo'/>
+                <img src="/degiro logo (2).png" alt="" className='txtlogo' />
             </div>
             <nav>
                 <ul>
@@ -78,31 +78,34 @@ const Header = () => {
                 <div className="line3"></div>
             </div>
             <div className={`overlay ${showModal ? 'showing-modal' : ''}`} >
-                <div className="overlay-close-btn-container" onClick={()=> setShowModal(false)}>
+                <div className="overlay-close-btn-container" onClick={() => setShowModal(false)}>
                     <MdClose />
                 </div>
                 <div className="menu-card">
                     <div className="menu-card-image-conatiner">
-                        <img src="/degiro logo (2).png" alt="" className='mobile-logo'/> 
+                        <img src="/degiro logo (2).png" alt="" className='mobile-logo' />
                     </div>
                     <ul className="list">
                         <li className="element"><Link to='/'>home</Link></li>
                         <li className="element"><Link to='/about'>about</Link></li>
                         <div className="market-dropdown" >
-                            <p onClick={()=> setShowMarkets(!showMarkets)}>markets</p>
-                            <div onClick={()=> setShowMarkets(!showMarkets)} className={`market-dropdown-svg-container ${showMarkets && 'rotate'}` }>
+                            <p onClick={() => setShowMarkets(!showMarkets)}>markets</p>
+                            <div onClick={() => setShowMarkets(!showMarkets)} className={`market-dropdown-svg-container ${showMarkets && 'rotate'}`}>
                                 <RiArrowDownSLine />
                             </div>
                             <div className={`market-links ${showMarkets && 'show-markets'}`}>
                                 <li className="element"><Link to='/forex'>forex</Link></li>
+                                <li className="element"><Link to='/commodities'>commodities</Link></li>
+                                <li className="element"><Link to='/bonds'>bonds</Link></li>
+                                <li className="element"><Link to='/options'>options</Link></li>
                                 <li className="element"><Link to='/futures'>futures</Link></li>
                                 <li className="element"><Link to='/indices'>indices</Link></li>
                                 <li className="element"><Link to='/stocks'>stocks</Link></li>
                             </div>
                         </div>
                         <div className="market-dropdown" >
-                            <p onClick={()=> setShowAnalytics(!showAnalytics)}>analytics</p>
-                            <div onClick={()=> setShowAnalytics(!showAnalytics)} className={`market-dropdown-svg-container ${showAnalytics && 'rotate'}` }>
+                            <p onClick={() => setShowAnalytics(!showAnalytics)}>analytics</p>
+                            <div onClick={() => setShowAnalytics(!showAnalytics)} className={`market-dropdown-svg-container ${showAnalytics && 'rotate'}`}>
                                 <RiArrowDownSLine />
                             </div>
                             <div className={`analytics-links ${showAnalytics && 'show-markets'}`}>
@@ -113,8 +116,8 @@ const Header = () => {
                             </div>
                         </div>
                         <div className="market-dropdown" >
-                            <p onClick={()=> setShowCompany(!showCompany)}>company</p>
-                            <div onClick={()=> setShowCompany(!showCompany)} className={`market-dropdown-svg-container ${showCompany && 'rotate'}` }>
+                            <p onClick={() => setShowCompany(!showCompany)}>company</p>
+                            <div onClick={() => setShowCompany(!showCompany)} className={`market-dropdown-svg-container ${showCompany && 'rotate'}`}>
                                 <RiArrowDownSLine />
                             </div>
                             <div className={`company-links ${showCompany && 'show-markets'}`}>

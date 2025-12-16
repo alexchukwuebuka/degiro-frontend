@@ -42,6 +42,9 @@ import UserdashboardTraders from './components/userdashboardTraders/Userdashboar
 import Verify from './pages/verifyPage/Verify';
 import PasswordReset from './components/passwordreset/PasswordReset';
 import ForgotPassword from './components/forgotpassword/ForgotPassword';
+import Commodities from './pages/commodities/Commodities';
+import Bonds from './pages/bonds/Bonds';
+import Options from './pages/options/Options';
 
 function App() {
   useEffect(() => {
@@ -121,6 +124,9 @@ function App() {
               <Route path=':id/verify/:token' element={<VerifyEmail route={route} />} />
               <Route path='/passwordreset' element={<ForgotPassword route={route} />} />
               <Route path='/resetpassword/:email' element={<PasswordReset route={route} />} />
+              <Route path='/bonds' element={<Bonds />} />
+              <Route path='/options' element={<Options />} />
+              <Route path='/commodities' element={<Commodities />} />
             </Routes>
           </motion.div>
         </Router>
