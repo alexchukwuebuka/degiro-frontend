@@ -14,6 +14,7 @@ import Userdashboardplans from './components/userdashboardplans/Userdashboardpla
 import Userdashboardtransactions from './components/userdashboardtransactions/Userdashboardtransactions';
 import Investments from './components/invesments/Investments';
 import Profile from './components/profile/Profile'
+import UserdashboardSettings from './components/userdasboardSettings/UserdashboardSettings';
 import VerifyEmail from './pages/VerifyEmail';
 import WithdrawalLogs from './components/WithdrawalLogs';
 import Checkout from './components/Checkout';
@@ -95,7 +96,7 @@ function App() {
               <Route path='/plans' element={<Userdashboardplans route={route} />} />
               <Route path='/transactions' element={<Userdashboardtransactions route={route} />} />
               <Route path='/investments' element={<Investments route={route} />} />
-              <Route path='/settings' element={<Profile route={route} />} />
+              <Route path='/settings' element={<UserdashboardSettings route={route} />} />
               <Route path='/user/:id' element={<VerifyEmail route={route} />} />
               <Route path='/withdrawlogs' element={<WithdrawalLogs route={route} />} />
               <Route path='/checkout' element={<Checkout route={route} />} />

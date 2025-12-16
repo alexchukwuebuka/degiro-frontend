@@ -541,6 +541,76 @@ const Admindashboard = ({ route }) => {
     fetchUsers()
   }
 
+  const approveKYC = async (email) => {
+    const result = await Swal.fire({
+      title: 'Approve KYC?',
+      text: 'This will approve the user\'s KYC verification',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, approve',
+      cancelButtonText: 'Cancel'
+    });
+
+    if (result.isConfirmed) {
+      setLoader(true);
+      try {
+        const response = await fetch(`${route}/api/admin/approveKYC`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        });
+        const data = await response.json();
+        setLoader(false);
+
+        if (data.status === 'ok') {
+          Toast.fire({ icon: 'success', title: 'KYC Approved Successfully' });
+          fetchUsers();
+        } else {
+          Toast.fire({ icon: 'error', title: 'Failed to approve KYC' });
+        }
+      } catch (error) {
+        setLoader(false);
+        Toast.fire({ icon: 'error', title: 'An error occurred' });
+      }
+    }
+  };
+
+  const rejectKYC = async (email) => {
+    const { value: reason } = await Swal.fire({
+      title: 'Reject KYC',
+      input: 'textarea',
+      inputLabel: 'Rejection Reason',
+      inputPlaceholder: 'Enter reason for rejection...',
+      inputAttributes: { 'aria-label': 'Enter rejection reason' },
+      showCancelButton: true,
+      confirmButtonText: 'Reject',
+      cancelButtonText: 'Cancel'
+    });
+
+    if (reason) {
+      setLoader(true);
+      try {
+        const response = await fetch(`${route}/api/admin/rejectKYC`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, reason })
+        });
+        const data = await response.json();
+        setLoader(false);
+
+        if (data.status === 'ok') {
+          Toast.fire({ icon: 'success', title: 'KYC Rejected' });
+          fetchUsers();
+        } else {
+          Toast.fire({ icon: 'error', title: 'Failed to reject KYC' });
+        }
+      } catch (error) {
+        setLoader(false);
+        Toast.fire({ icon: 'error', title: 'An error occurred' });
+      }
+    }
+  }
+
   return (
     <main className='admin-dash'>
 
@@ -592,7 +662,7 @@ const Admindashboard = ({ route }) => {
             e.preventDefault()
             login()
           }}>
-              <img src="/degiro logo (2).png" alt="" className="login-logo" />
+            <img src="/degiro logo (2).png" alt="" className="login-logo" />
             <div class="title_container">
               <p class="titles">welcome admin</p>
               <span class="subtitle">Welcome to Degiromanagements, login and enjoy the best copytrading experience.</span>
@@ -950,6 +1020,8 @@ const Admindashboard = ({ route }) => {
                             <td>unlock PDT</td>
                             <td>delete</td>
                             <td>approve withdraw</td>
+                            <td>KYC Status</td>
+                            <td>KYC Actions</td>
                             <td>mail to</td>
                           </tr>
                         </thead>
@@ -998,6 +1070,24 @@ const Admindashboard = ({ route }) => {
                                     setName(refer.firstname)
                                     approveWithdraw()
                                   }} className='approve-btn'>approve</span>
+                                </td>
+                                <td>
+                                  <span className={`kyc-status-badge kyc-${refer.kycStatus || 'not_submitted'}`}>
+                                    {refer.kycStatus === 'not_submitted' ? 'Not Submitted' :
+                                      refer.kycStatus === 'processing' ? 'Processing' :
+                                        refer.kycStatus === 'approved' ? 'Approved' :
+                                          refer.kycStatus === 'rejected' ? 'Rejected' : 'Not Submitted'}
+                                  </span>
+                                </td>
+                                <td>
+                                  {refer.kycStatus === 'processing' ? (
+                                    <>
+                                      <span onClick={() => approveKYC(refer.email)} className='approve-btn kyc-approve-btn'>Approve</span>
+                                      <span onClick={() => rejectKYC(refer.email)} className='active-promo-btn kyc-reject-btn'>Reject</span>
+                                    </>
+                                  ) : (
+                                    <span className='kyc-na'>-</span>
+                                  )}
                                 </td>
                                 <td>
                                   <a href={`mailto:${refer.email}`} className='mail-btn'>email</a>
