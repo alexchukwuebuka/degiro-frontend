@@ -51,27 +51,72 @@ const Commodities = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/* Commodities Type Cards */}
+                    <section className='commodities-types-section' data-aos="fade-up">
+                        <div className="commodities-types-header">
+                            <h2>Trade <span className="highlight">Commodities</span></h2>
+                            <p>Diversify with physical assets and natural resources</p>
+                        </div>
+                        <div className="commodities-cards-wrapper">
+                            <div className="commodity-type-card commodity-gold" data-aos="flip-left" data-aos-delay="100">
+                                <div className="commodity-card-bg"></div>
+                                <div className="commodity-card-content">
+                                    <div className="commodity-icon">💰</div>
+                                    <h3>Precious Metals</h3>
+                                    <p>Gold, Silver, Platinum</p>
+                                    <ul>
+                                        <li>Safe haven assets</li>
+                                        <li>Inflation hedge</li>
+                                        <li>Portfolio insurance</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div className="commodity-type-card commodity-energy" data-aos="flip-left" data-aos-delay="200">
+                                <div className="commodity-card-bg"></div>
+                                <div className="commodity-card-content">
+                                    <div className="commodity-icon">⚡</div>
+                                    <h3>Energy</h3>
+                                    <p>Oil, Natural Gas, Coal</p>
+                                    <ul>
+                                        <li>Global demand driver</li>
+                                        <li>Economic indicator</li>
+                                        <li>High volatility</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div className="commodity-type-card commodity-agriculture" data-aos="flip-left" data-aos-delay="300">
+                                <div className="commodity-card-bg"></div>
+                                <div className="commodity-card-content">
+                                    <div className="commodity-icon">🌾</div>
+                                    <h3>Agriculture</h3>
+                                    <p>Wheat, Corn, Soybeans</p>
+                                    <ul>
+                                        <li>Essential commodities</li>
+                                        <li>Weather dependent</li>
+                                        <li>Seasonal patterns</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div className="commodity-type-card commodity-industrial" data-aos="flip-left" data-aos-delay="400">
+                                <div className="commodity-card-bg"></div>
+                                <div className="commodity-card-content">
+                                    <div className="commodity-icon">🏭</div>
+                                    <h3>Industrial Metals</h3>
+                                    <p>Copper, Aluminum, Zinc</p>
+                                    <ul>
+                                        <li>Manufacturing demand</li>
+                                        <li>Economic growth proxy</li>
+                                        <li>Infrastructure plays</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                <section className='trading-view-forex-section' data-aos="fade-up">
-                    <div className="videoframe-text-container">
-                        <h1><span className="highlight">Commodities</span> maps </h1>
-                    </div>
-                    <div className="trading-view-forex-wrapper">
-                        <div className="trading-view-card">
-                            <div className="trading-view-card-text-container">
-                                <h1>Commodities Cross Rates</h1>
-                                <p>Display real-time quotes of selected commodities in comparison to other major assets.</p>
-                            </div>
-                        </div>
-                        <div className="trading-view-card">
-                            <div className="trading-view-card-text-container">
-                                <h1>Commodities Heatmap</h1>
-                                <p>Showcase a snapshot of commodities market action. Spot strong and weak commodities and see how they compare.</p>
-                            </div>
-                            <Forexheatmap />
-                        </div>
-                    </div>
-                </section>
             </div>
             <Contact />
             <Footer />

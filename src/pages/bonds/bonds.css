@@ -63,6 +63,109 @@
     margin-bottom: 40px;
 }
 
+/* Bonds Feature Cards Section */
+.bonds-features-section {
+    width: 100%;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bonds-features-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.bonds-features-header h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.bonds-features-header p {
+    font-size: 1.1rem;
+    color: #999;
+}
+
+.bonds-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bonds-feature-card {
+    background: linear-gradient(145deg, #1f1f1f 0%, #141414 100%);
+    border: 2px solid #2a2a2a;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.bonds-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(230, 184, 11, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.bonds-feature-card:hover::before {
+    left: 100%;
+}
+
+.bonds-feature-card:hover {
+    transform: translateY(-10px);
+    border-color: #E6B80B;
+    box-shadow: 0 20px 40px rgba(230, 184, 11, 0.2);
+}
+
+.bonds-card-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    background: linear-gradient(135deg, #91770A 0%, #E6B80B 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.bonds-feature-card:hover .bonds-card-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(230, 184, 11, 0.4);
+}
+
+.bonds-card-icon svg {
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+
+.bonds-feature-card h3 {
+    font-size: 1.5rem;
+    color: #E6B80B;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.bonds-feature-card p {
+    font-size: 1rem;
+    color: #bbb;
+    line-height: 1.6;
+}
+
 @media screen and (max-width: 990px) {
     .bonds-img-container {
         width: 100%;
@@ -100,5 +203,18 @@
 
     .bonds-page-wrapper {
         width: 100%;
+    }
+
+    .bonds-features-header h2 {
+        font-size: 2rem;
+    }
+
+    .bonds-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .bonds-feature-card {
+        padding: 30px 20px;
     }
 }

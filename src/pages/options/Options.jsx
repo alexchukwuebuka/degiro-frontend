@@ -49,20 +49,53 @@ const Options = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <section className='trading-view-forex-section' data-aos="fade-up">
-                    <div className="videoframe-text-container">
-                        <h1><span className="highlight">Options</span> analytics </h1>
-                    </div>
-                    <div className="trading-view-forex-wrapper">
-                        <div className="trading-view-card">
-                            <div className="trading-view-card-text-container">
-                                <h1>Options Chain</h1>
-                                <p>View real-time options chains and analytics.</p>
+
+                    {/* Options Strategy Cards */}
+                    <section className='options-strategies-section' data-aos="fade-up">
+                        <div className="options-strategies-header">
+                            <h2>Popular <span className="highlight">Options</span> Strategies</h2>
+                            <p>Leverage, hedge, and profit from market movements</p>
+                        </div>
+                        <div className="options-cards-container">
+                            <div className="options-strategy-card options-card-1" data-aos="zoom-in" data-aos-delay="100">
+                                <div className="options-card-header">
+                                    <div className="options-card-number">01</div>
+                                    <h3>Call Options</h3>
+                                </div>
+                                <p>Profit from rising prices with the right to buy at a predetermined price. Limited risk, unlimited potential.</p>
+                                <div className="options-card-badge">BULLISH</div>
+                            </div>
+
+                            <div className="options-strategy-card options-card-2" data-aos="zoom-in" data-aos-delay="200">
+                                <div className="options-card-header">
+                                    <div className="options-card-number">02</div>
+                                    <h3>Put Options</h3>
+                                </div>
+                                <p>Protect your portfolio or profit from declining markets. Hedge against downside risk effectively.</p>
+                                <div className="options-card-badge">BEARISH</div>
+                            </div>
+
+                            <div className="options-strategy-card options-card-3" data-aos="zoom-in" data-aos-delay="300">
+                                <div className="options-card-header">
+                                    <div className="options-card-number">03</div>
+                                    <h3>Covered Calls</h3>
+                                </div>
+                                <p>Generate income from your existing stock holdings by selling call options. Conservative strategy.</p>
+                                <div className="options-card-badge">INCOME</div>
+                            </div>
+
+                            <div className="options-strategy-card options-card-4" data-aos="zoom-in" data-aos-delay="400">
+                                <div className="options-card-header">
+                                    <div className="options-card-number">04</div>
+                                    <h3>Spreads</h3>
+                                </div>
+                                <p>Combine multiple options to limit risk and define profit potential. Advanced trading technique.</p>
+                                <div className="options-card-badge">ADVANCED</div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+                </div>
+                
             </div>
             <Contact />
             <Footer />
