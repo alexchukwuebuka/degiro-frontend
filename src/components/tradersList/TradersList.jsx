@@ -46,13 +46,13 @@ const TradersList = () => {
           <div className="traderListCard">
             <div className="traderProfileContainer">
               <div className="traderListProfile">
-                <img src="/fortune-vieyra-QIMjYJSFoXM-unsplash.jpg" alt="" className="traderListProfilePicture" />
+                <img src="/WhatsApp Image 2025-12-16 at 08.01.48.jpeg" alt="" className="traderListProfilePicture" />
                 <span className="traderListProfileName">
                   <p className="traderListProfileFirstname">
-                    pete
+                    PIF
                   </p>
                   <p className="traderListProfileLastname">
-                    Duplexi
+                    Rakaan
                   </p>
                 </span>
               </div>
