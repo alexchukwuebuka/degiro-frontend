@@ -174,7 +174,7 @@ const Userdashboardfundaccount = ({route}) => {
             </div>
             <div className="swiper-container">
                 <div className='updated-crypto-container'>
-                  <h2>Select Cryptocurrency</h2>
+                  <h2>Select payment method</h2>
                   <select onChange={handleChange} defaultValue="" className='crypto-select'>
                     <option value="" disabled>Select method</option>
                     {depositOptions.map(opt => (
