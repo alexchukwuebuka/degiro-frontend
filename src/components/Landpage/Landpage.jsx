@@ -26,7 +26,7 @@ const Landpage = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.65, delay: 0.4 }}
           >
-            Copy proven traders and let smart strategies work for you so you stay confident as your portfolio grows. Seize chance to achieve your financial goals and follow winning path by mirroring expert traders.
+            Copy proven traders and let smart strategies work for you. Stay confident as your portfolio grows. Seize chance to achieve your financial goals and follow winning path by mirroring expert traders.
           </motion.p>
           <motion.button className="launch-btn cssbuttons-io" initial={{ y: 45, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

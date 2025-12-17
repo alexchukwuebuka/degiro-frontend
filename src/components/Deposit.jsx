@@ -154,7 +154,7 @@ const Deposit = ({ amount, active, close, route }) => {
                 <p>confirm your deposit by uploading a proof of payment, after paying</p>
                 <div className="checkout-info-container">
                     <p>You have requested to deposit <span className='bold'>${amount} USD</span></p>
-                    <h3>Copy Link to copy wallet address below to fund your account</h3>
+                    <h3>Copy the wallet address below to fund your account</h3>
                     <div className="click-to-copy-container">
                         <span className='clipboard-btn'>
                             <FiLink />

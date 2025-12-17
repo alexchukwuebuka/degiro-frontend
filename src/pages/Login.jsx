@@ -13,6 +13,31 @@ const Login = ({ route }) => {
   const [loader, setLoader] = useState(false)
   const [check, setChecked] = useState(false)
 
+  useEffect(()=>{
+    setLoader(true)
+    const token = localStorage.getItem('token')
+    const checkUser = async()=>{
+      if(token !== undefined){
+        const req = await fetch(`${route}/api/verifylogged`, {
+          headers: {
+            'x-access-token': localStorage.getItem('token')
+          }
+        })
+        const res = await req.json()
+        setLoader(false)
+         
+        console.log(res.status)
+        if(res.status === 'ok'){
+          navigate('/dashboard')
+        }
+        else{
+          setLoader(false)
+        }
+      }
+    }
+    checkUser()
+  },[])
+
 
   // sweet alert function 
   const Toast = Swal.mixin({
