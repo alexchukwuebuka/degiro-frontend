@@ -26,7 +26,7 @@ const Landpage = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.65, delay: 0.4 }}
           >
-            Rely on our team to handle market complexities, so you can relax as your assets grow steadily. Take the chance to realize your fiscal goals and start a rewarding path to success with our expert guidance.
+            Copy proven traders and let smart strategies work for you so you stay confident as your portfolio grows. Seize chance to achieve your financial goals and follow winning path by mirroring expert traders.
           </motion.p>
           <motion.button className="launch-btn cssbuttons-io" initial={{ y: 45, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

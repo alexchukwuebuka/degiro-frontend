@@ -10,6 +10,7 @@ import { AiOutlineSafety } from "react-icons/ai";
 import { AiOutlineSetting } from 'react-icons/ai'
 import { FiLogOut } from 'react-icons/fi'
 import { FaRegChartBar } from 'react-icons/fa'
+import { FaArrowLeft } from "react-icons/fa6";
 const Userdashboardheader = ({ route }) => {
     const navigate = useNavigate()
     const [userData, setUserData] = useState()
@@ -57,11 +58,12 @@ const Userdashboardheader = ({ route }) => {
                     <img src="/degiro logo (2).png" alt="" className="dashboard-logo" />
                 </div>
                 <div className='dashboard-links-container'>
+                    
                     <li className="dashboard-links">
                         <div className="dashboard-svg-container">
                             <AiOutlineAppstoreAdd />
                         </div>
-                        <Link to='/dashboard'>home</Link>
+                        <Link to='/dashboard'>dashboard</Link>
                     </li>
 
                     <li className="dashboard-links">
@@ -107,6 +109,12 @@ const Userdashboardheader = ({ route }) => {
                             <FiLogOut />
                         </div>
                         <Link to='/login'>logout</Link>
+                    </li>
+                    <li className="dashboard-links">
+                        <div className="dashboard-svg-container">
+                            <FaArrowLeft />
+                        </div>
+                        <Link to='/'>back to home</Link>
                     </li>
                 </div>
             </aside>

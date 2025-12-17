@@ -10,6 +10,7 @@ import { GrTransaction } from "react-icons/gr";
 import { RiLuggageDepositLine } from 'react-icons/ri'
 import { AiOutlineSetting, AiOutlineStock } from 'react-icons/ai'
 import { RiLockPasswordLine } from 'react-icons/ri'
+import { FaArrowLeft } from "react-icons/fa6";
 import { FiLogOut } from 'react-icons/fi'
 const MobileDropdown = ({ route, showStatus, closeMenu }) => {
     const navigate = useNavigate()
@@ -127,6 +128,12 @@ const MobileDropdown = ({ route, showStatus, closeMenu }) => {
                     }}>
                         <RiLockPasswordLine />
                         <p>kyc</p>
+                        </div>
+                        <div className="dropdown-tabs" onClick={() => {
+                        navigate('/')
+                    }}>
+                        <FaArrowLeft /> 
+                        <p>back to home</p>
                     </div>
 
                     <div className="dropdown-tabs" onClick={() => {
@@ -135,6 +142,7 @@ const MobileDropdown = ({ route, showStatus, closeMenu }) => {
                         <FiLogOut />
                         <p>logout</p>
                     </div>
+                    
                 </div>
             }
         </div>

@@ -14,7 +14,7 @@ const Copytrade = () => {
                     </div>
                     <h1 data-aos="fade-up" className='copytrade-header'>Degiromanagements</h1>
                     <p data-aos="fade-up">
-                        At Degiromanagements, we provide accurate forex analysis to help investors maximize profits through copy trading. Using MT4 and MT5, our experts analyze the markets with technical and fundamental strategies, identifying high-probability trades. We share real-time signals, market updates, and risk assessments directly through our Telegram channel, allowing investors to copy top-performing trades effortlessly.
+                        At Degiromanagements, we enable investors to turn professional trading strategies into their own by copying skilled traders. Using MT4 and MT5, our experts execute and manage trades with proven technical and fundamental methods, selecting setups. We deliver live trade updates, performance insights, and risk guidance via Telegram, making it easy for investors to mirror top traders and grow confidently daily.
                     </p>
                     {/* <button
                     className="launch-btn"
