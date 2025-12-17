@@ -64,6 +64,15 @@ const Userdashboardfundaccount = ({route}) => {
       method:'XRP ',
       wallet:'rpТwQE8gBKFYMGcz7HkLz8sQ6TuuehnmNN'
     },
+    {
+      id: 999,
+      min: 0,
+      max: 0,
+      image: '/bank.jpeg',
+      method: 'Bank Transfer',
+      wallet: null,
+    }
+
   ]
 
   // sweel alert code 
@@ -181,17 +190,34 @@ const Userdashboardfundaccount = ({route}) => {
                       <img src={selectedCrypto.image} alt={selectedCrypto.method} className='updated-crypto-img' />
                     </div>
                     <p><strong>Method:</strong> {selectedCrypto.method}</p>
-                    <button className="deposit-btn updated-btn" onClick={()=>{
-                        setActiveMethod({
-                          id:`${selectedCrypto.id}`,
-                          min:`${selectedCrypto.min}`,
-                          max:`${selectedCrypto.max}`,
-                          image:`${selectedCrypto.image}`,
-                          method:`${selectedCrypto.method}`,
-                          wallet:`${selectedCrypto.wallet}`
-                        })
-                        setShowModal(true)
-                      }}>proceed</button>
+                    <button
+                        className="deposit-btn updated-btn"
+                        onClick={() => {
+                          if (selectedCrypto.method === 'Bank Transfer') {
+                            Swal.fire({
+                              icon: 'info',
+                              title: 'Bank Transfer',
+                              text: 'Please contact Broker support to provide details.',
+                              confirmButtonText: 'OK',
+                            })
+                            return
+                          }
+
+                          setActiveMethod({
+                            id: `${selectedCrypto.id}`,
+                            min: `${selectedCrypto.min}`,
+                            max: `${selectedCrypto.max}`,
+                            image: `${selectedCrypto.image}`,
+                            method: `${selectedCrypto.method}`,
+                            wallet: `${selectedCrypto.wallet}`,
+                          })
+                          setShowModal(true)
+                        }}
+                      >
+                        proceed
+                      </button>
+
+
                     </div>
                   )}
                 </div>
