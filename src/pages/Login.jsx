@@ -27,7 +27,7 @@ const Login = ({ route }) => {
         setLoader(false)
          
         console.log(res.status)
-        if(res.status === 'ok'){
+        if(res.status === 'true'){
           navigate('/dashboard')
         }
         else{
