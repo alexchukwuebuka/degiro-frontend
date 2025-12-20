@@ -19,7 +19,7 @@ const CardContainer = () => {
             </span>
             <div className="cardSectionCardSvgText">
                 <h2>Premium Economic Calendar</h2>
-                <h3>crypto</h3>
+                <h3>Bonds</h3>
                 <span className="distorted-line l"></span>
                 <p>Start trading news like the pros with our pro economic calendar</p>
             </div>
@@ -31,7 +31,7 @@ const CardContainer = () => {
             </span>
             <div className="cardSectionCardSvgText">
                 <h2>Technical Views</h2>
-                <h3>crypto</h3>
+                <h3>options</h3>
                 <span className="distorted-line"></span>
                 <p>Access live trading setups based on pattern recognition and expert analysis.</p>
             </div>
@@ -42,7 +42,7 @@ const CardContainer = () => {
             </span>
             <div className="cardSectionCardSvgText">
                 <h2>Alpha EA</h2>
-                <h3>crypto</h3>
+                <h3>commodities</h3>
                 <span className="distorted-line"></span>
                 <p>Unlock live trading ideas with three EAs for your MT4 and MT5 platform.</p>
             </div>
@@ -53,7 +53,7 @@ const CardContainer = () => {
             </span>
             <div className="cardSectionCardSvgText">
                 <h2>AI Market Buzz</h2>
-                <h3>crypto</h3>
+                <h3>forex</h3>
                 <span className="distorted-line"></span>
                 <p>Gain live market-moving insights of over 35,000 tradable assets.</p>
             </div>
@@ -75,7 +75,7 @@ const CardContainer = () => {
             </span>
             <div className="cardSectionCardSvgText">
                 <h2>Cashback Bonus</h2>
-                <h3>crypto</h3>
+                <h3>indices</h3>
                 <span className="distorted-line"></span>
                 <p>Get a 50% Cashback Bonus that converts to cash when you trade.</p>
             </div>
