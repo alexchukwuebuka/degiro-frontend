@@ -10,7 +10,7 @@ import { GrTransaction } from "react-icons/gr";
 import { RiLuggageDepositLine } from 'react-icons/ri'
 import { AiOutlineSetting, AiOutlineStock } from 'react-icons/ai'
 import { RiLockPasswordLine } from 'react-icons/ri'
-import { FaArrowLeft, FaPhone } from "react-icons/fa6";
+import { FaArrowLeft, FaWhatsapp } from "react-icons/fa6";
 import { FiLogOut, FiMail } from 'react-icons/fi'
 const MobileDropdown = ({ route, showStatus, closeMenu }) => {
     const navigate = useNavigate()
@@ -143,13 +143,16 @@ const MobileDropdown = ({ route, showStatus, closeMenu }) => {
                         <p>logout</p>
                     </div>
 
-                    <div className="mobile-dropdown-contact-info" style={{ padding: '0 20px', marginTop: '10px', marginBottom: '10px', borderTop: '1px solid #333', paddingTop: '15px', display: 'flex', justifyContent: 'center' }}>
-                        <a href="tel:9455997111" className="contact-ball" target='blank'>
-                            <FaPhone />
-                        </a>
-                        <a href='mailto:degiromanagements@gmail.com' className="contact-ball" target='blank'>
-                            <FiMail />
-                        </a>
+                    <div className="mobile-dropdown-contact-info" style={{ padding: '0 20px', marginTop: '10px', marginBottom: '10px', borderTop: '1px solid #333', paddingTop: '15px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+                        <p style={{ color: '#fff', marginBottom: '10px', fontSize: '0.9rem', textTransform: 'capitalize' }}>contact us:</p>
+                        <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                            <a href="https://wa.me/9455997111" className="contact-ball" target='blank'>
+                                <FaWhatsapp />
+                            </a>
+                            <a href='mailto:degiromanagements@gmail.com' className="contact-ball" target='blank'>
+                                <FiMail />
+                            </a>
+                        </div>
                     </div>
 
                 </div>
