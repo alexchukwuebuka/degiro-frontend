@@ -9,8 +9,9 @@ import { MdAddchart } from "react-icons/md";
 import { AiOutlineSafety } from "react-icons/ai";
 import { AiOutlineSetting } from 'react-icons/ai'
 import { FiLogOut } from 'react-icons/fi'
-import { FaRegChartBar } from 'react-icons/fa'
+import { FaRegChartBar, FaPhone } from 'react-icons/fa'
 import { FaArrowLeft } from "react-icons/fa6";
+import { FiMail } from 'react-icons/fi'
 const Userdashboardheader = ({ route }) => {
     const navigate = useNavigate()
     const [userData, setUserData] = useState()
@@ -58,7 +59,7 @@ const Userdashboardheader = ({ route }) => {
                     <img src="/degiro logo (2).png" alt="" className="dashboard-logo" />
                 </div>
                 <div className='dashboard-links-container'>
-                    
+
                     <li className="dashboard-links">
                         <div className="dashboard-svg-container">
                             <AiOutlineAppstoreAdd />
@@ -116,6 +117,14 @@ const Userdashboardheader = ({ route }) => {
                         </div>
                         <Link to='/'>back to home</Link>
                     </li>
+                    <div className="dashboard-contact-info" style={{ marginTop: 'auto', padding: '20px 0 20px 30px', display: 'flex' }}>
+                        <a href="tel:9455997111" className="contact-ball" target='blank'>
+                            <FaPhone />
+                        </a>
+                        <a href='mailto:degiromanagements@gmail.com' className="contact-ball" target='blank'>
+                            <FiMail />
+                        </a>
+                    </div>
                 </div>
             </aside>
         </>

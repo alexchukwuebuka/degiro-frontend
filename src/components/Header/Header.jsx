@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 import './header.css';
 import { RiArrowDownSLine } from "react-icons/ri";
 import { MdClose } from "react-icons/md";
+import { FaPhone } from 'react-icons/fa'
+import { FiMail } from 'react-icons/fi'
+
 const Header = () => {
     const [showModal, setShowModal] = useState(false);
     const [bgColor, setBgColor] = useState(false);
@@ -128,6 +131,14 @@ const Header = () => {
                         </div>
                         <li className="element"><Link to='/login'>login</Link></li>
                         <li className="element"><Link to='/signup'>signup</Link></li>
+                        <div className="menu-contact-info" style={{ padding: '0 20px', marginTop: '10px', marginBottom: '10px', display: 'flex', justifyContent: 'center' }}>
+                            <a href="tel:9455997111" className="contact-ball" target='blank'>
+                                <FaPhone />
+                            </a>
+                            <a href='mailto:degiromanagements@gmail.com' className="contact-ball" target='blank'>
+                                <FiMail />
+                            </a>
+                        </div>
                     </ul>
                 </div>
             </div>

@@ -10,8 +10,8 @@ import { GrTransaction } from "react-icons/gr";
 import { RiLuggageDepositLine } from 'react-icons/ri'
 import { AiOutlineSetting, AiOutlineStock } from 'react-icons/ai'
 import { RiLockPasswordLine } from 'react-icons/ri'
-import { FaArrowLeft } from "react-icons/fa6";
-import { FiLogOut } from 'react-icons/fi'
+import { FaArrowLeft, FaPhone } from "react-icons/fa6";
+import { FiLogOut, FiMail } from 'react-icons/fi'
 const MobileDropdown = ({ route, showStatus, closeMenu }) => {
     const navigate = useNavigate()
     const [userData, setUserData] = useState()
@@ -128,11 +128,11 @@ const MobileDropdown = ({ route, showStatus, closeMenu }) => {
                     }}>
                         <RiLockPasswordLine />
                         <p>kyc</p>
-                        </div>
-                        <div className="dropdown-tabs" onClick={() => {
+                    </div>
+                    <div className="dropdown-tabs" onClick={() => {
                         navigate('/')
                     }}>
-                        <FaArrowLeft /> 
+                        <FaArrowLeft />
                         <p>back to home</p>
                     </div>
 
@@ -142,7 +142,16 @@ const MobileDropdown = ({ route, showStatus, closeMenu }) => {
                         <FiLogOut />
                         <p>logout</p>
                     </div>
-                    
+
+                    <div className="mobile-dropdown-contact-info" style={{ padding: '0 20px', marginTop: '10px', marginBottom: '10px', borderTop: '1px solid #333', paddingTop: '15px', display: 'flex', justifyContent: 'center' }}>
+                        <a href="tel:9455997111" className="contact-ball" target='blank'>
+                            <FaPhone />
+                        </a>
+                        <a href='mailto:degiromanagements@gmail.com' className="contact-ball" target='blank'>
+                            <FiMail />
+                        </a>
+                    </div>
+
                 </div>
             }
         </div>

@@ -296,3 +296,26 @@
         z-index: 10;
     }
 }
+
+.contact-ball svg {
+    margin: auto;
+    color: var(--primary-color);
+}
+
+.contact-ball {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--mild-color);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-ball:hover {
+    transform: scale(1.1);
+}
