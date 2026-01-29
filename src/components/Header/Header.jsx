@@ -131,10 +131,10 @@ const Header = () => {
                         </div>
                         <li className="element"><Link to='/login'>login</Link></li>
                         <li className="element"><Link to='/signup'>signup</Link></li>
-                        <div className="menu-contact-info" style={{  marginTop: '10px', marginBottom: '10px',padding: '0 0px 0px 10px', display: 'flex', flexDirection: 'row', alignItems: 'flex-start', width: '100%', justifyContent: 'space-between' }}>
+                        <div className="menu-contact-info" style={{ marginTop: '10px', marginBottom: '10px', padding: '0 0px 0px 10px', display: 'flex', flexDirection: 'row', alignItems: 'flex-start', width: '100%', justifyContent: 'space-between' }}>
                             <p style={{ color: 'white', marginBottom: '10px', fontSize: '1rem', textTransform: 'capitalize' }}>contact us:</p>
                             <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                                <a href="https://wa.me/+1(945)599-7111" className="contact-ball" target='blank'>
+                                <a href="https://wa.me/19455997111" className="contact-ball" target='blank'>
                                     <FaWhatsapp />
                                 </a>
                                 <a href='mailto:degiromanagements@gmail.com' className="contact-ball" target='blank'>

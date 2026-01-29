@@ -120,7 +120,7 @@ const Userdashboardheader = ({ route }) => {
                     <div className="dashboard-contact-info" style={{ marginTop: 'auto', padding: '20px 0 20px 30px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '100%' }}>
                         <p style={{ color: 'var(--text-color)', marginBottom: '10px', fontSize: '0.85rem', textTransform: 'capitalize' }}>contact us:</p>
                         <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                            <a href="https://wa.me/+1(945)599-7111" className="contact-ball" target='blank'>
+                            <a href="https://wa.me/19455997111" className="contact-ball" target='blank'>
                                 <FaWhatsapp />
                             </a>
                             <a href='mailto:degiromanagements@gmail.com' className="contact-ball" target='blank'>

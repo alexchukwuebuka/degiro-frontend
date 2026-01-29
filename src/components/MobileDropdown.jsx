@@ -146,7 +146,7 @@ const MobileDropdown = ({ route, showStatus, closeMenu }) => {
                     <div className="mobile-dropdown-contact-info" style={{ padding: '0 20px', marginTop: '10px', marginBottom: '10px', borderTop: '1px solid #333', paddingTop: '15px', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                         <p style={{ color: '#fff', marginBottom: '10px', fontSize: '0.9rem', textTransform: 'capitalize' }}>contact us:</p>
                         <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                            <a href="https://wa.me/+1(945)599-7111" className="contact-ball" target='blank'>
+                            <a href="https://wa.me/19455997111" className="contact-ball" target='blank'>
                                 <FaWhatsapp />
                             </a>
                             <a href='mailto:degiromanagements@gmail.com' className="contact-ball" target='blank'>

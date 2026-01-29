@@ -40,8 +40,8 @@ const Contact = () => {
                         <a href='mailto:degiromanagements@gmail.com' className="ball contact-ball" target='blank'>
                             <FiMail />
                         </a>
-                        <a href="tel:9455997111" className="ball contact-ball" target='blank'>
-                            <FaPhone />
+                        <a href="https://wa.me/19455997111" className="ball contact-ball" target='blank'>
+                            <BsWhatsapp />
                         </a>
                         {/* <a href="https://api.whatsapp.com/send?phone=447529602972"className="ball contact-ball" target='blank'>
                     <BsWhatsapp />
