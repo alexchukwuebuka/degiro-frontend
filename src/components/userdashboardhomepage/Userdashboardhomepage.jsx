@@ -1,6 +1,6 @@
 import React from 'react'
 import './userdashboardhomepage.css'
-import { FaUserAlt, FaAngleDown } from "react-icons/fa";
+import { FaUserAlt, FaAngleDown, FaChartLine } from "react-icons/fa";
 import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect, useRef } from 'react'
 import { IoMdNotifications } from "react-icons/io";
@@ -183,6 +183,21 @@ const Userdashboardhomepage = ({ route }) => {
                 <p>${userData ? `${formatCurrency(userData.totalwithdraw)}.00` : '0.00'}</p>
               </div>
             </div>
+            {/* New Profit/Loss Card */}
+            <div className="lower-overview-card">
+              <div className="lower-card-icon-container">
+                <FaChartLine />
+              </div>
+              <div className="lower-card-text-container">
+                <h3>Total Profit</h3>
+                <p style={{ color: userData && userData.trades ? (userData.trades.reduce((acc, trade) => acc + (trade.tradeType === 'profit' ? parseInt(trade.amount) : -parseInt(trade.amount)), 0) >= 0 ? '#4caf50' : '#f44336') : 'white' }}>
+                  ${userData && userData.trades
+                    ? formatCurrency(userData.trades.reduce((acc, trade) => acc + (trade.tradeType === 'profit' ? parseInt(trade.amount) : -parseInt(trade.amount)), 0))
+                    : '0.00'
+                  }
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -290,7 +305,7 @@ const Userdashboardhomepage = ({ route }) => {
           </div>
         }
       </section>
-    </main>
+    </main >
   )
 }
 
