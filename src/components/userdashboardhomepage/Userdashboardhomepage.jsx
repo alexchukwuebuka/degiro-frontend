@@ -149,7 +149,7 @@ const Userdashboardhomepage = ({ route }) => {
                 Total Balance
               </h2>
               <div className="amount">
-                <h3>${userData ? `${formatCurrency(userData.funded)}.00` : '0.00'}</h3>
+                <h3>${userData ? `${formatCurrency(userData.funded)}` : '0.000'}</h3>
                 <span className="usd-btn">usd</span>
               </div>
             </div>
@@ -171,7 +171,7 @@ const Userdashboardhomepage = ({ route }) => {
               </div>
               <div className="lower-card-text-container">
                 <h3>total deposit</h3>
-                <p>${userData ? `${formatCurrency(userData.totaldeposit)}.00` : '0.00'}</p>
+                <p>${userData ? `${formatCurrency(userData.totaldeposit)}` : '0.000'}</p>
               </div>
             </div>
             <div className="lower-overview-card">
@@ -180,7 +180,7 @@ const Userdashboardhomepage = ({ route }) => {
               </div>
               <div className="lower-card-text-container">
                 <h3>total withdrawal</h3>
-                <p>${userData ? `${formatCurrency(userData.totalwithdraw)}.00` : '0.00'}</p>
+                <p>${userData ? `${formatCurrency(userData.totalwithdraw)}` : '0.000'}</p>
               </div>
             </div>
             {/* New Profit/Loss Card */}
@@ -193,7 +193,7 @@ const Userdashboardhomepage = ({ route }) => {
                 <p style={{ color: userData && userData.trades ? (userData.trades.reduce((acc, trade) => acc + (trade.tradeType === 'profit' ? parseInt(trade.amount) : -parseInt(trade.amount)), 0) >= 0 ? '#4caf50' : '#f44336') : 'white' }}>
                   ${userData && userData.trades
                     ? formatCurrency(userData.trades.reduce((acc, trade) => acc + (trade.tradeType === 'profit' ? parseInt(trade.amount) : -parseInt(trade.amount)), 0))
-                    : '0.00'
+                    : '0.000'
                   }
                 </p>
               </div>
