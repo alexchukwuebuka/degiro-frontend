@@ -64,7 +64,7 @@ const Userdashboardfundaccount = ({ route }) => {
       max: 1000,
       image: '/etherium.png',
       method: 'ETH',
-      wallet: '0xe25D6760Fd8961DBf7d259860Et7tdad78D67903'
+      wallet: '0xe25D6760Fd8961DBf7d259860Et7fdad78D67903'
     },
     {
       id: 3,
