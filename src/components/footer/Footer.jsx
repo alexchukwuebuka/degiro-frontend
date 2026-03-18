@@ -43,6 +43,9 @@ const Footer = () => {
                 <div className="copyright-txt">
                     <p> copyright &copy; 2022</p>
                 </div>
+                <div className="copyright-txt" style={{ textAlign: 'center', padding: '0 10px' }}>
+                    <p>Keizersgracht 555, 1017 DR Amsterdam, Netherlands</p>
+                </div>
                 <div className="policy-txt">
                     <Link to="/policy">terms and condition</Link>
                 </div>

@@ -33,6 +33,9 @@ const Contact = () => {
                     <p data-aos="fade-up">
                         Any question? Reach out to us and we’ll get back to you shortly.
                     </p>
+                    <p data-aos="fade-up" style={{ marginTop: '10px' }}>
+                        Keizersgracht 555, 1017 DR Amsterdam, Netherlands
+                    </p>
                     <div className="contact-card" data-aos="fade-up">
                         {/* <a href='https://t.me/+HqNYmvaCKL9hNmU0' className="ball contact-ball" target='blank'>
                     <FaTelegramPlane />
