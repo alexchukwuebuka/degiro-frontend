@@ -205,66 +205,68 @@ const Userdashboardhomepage = ({ route }) => {
           <TeslaWidget />
         </div>
         <div className="current-rank-section">
-          <div className="active-trader-container">
-            <div className="videoframe-text-container treader-header">
-              <h1>Your current <span className="highlight">Rank</span></h1>
-            </div>
-            <div className="traders-card active-trader-card">
-              <div className="trader-card-header">
-                <div className="trader-card-image-container">
-
-                  <img src={`${userData
-                    ? userData.totaldeposit > 20000
-                      ? '/diamond.png'
-                      : userData.totaldeposit > 5000
-                        ? '/download-removebg-preview (2).png'  // Gold image
-                        : '/images-removebg-preview.png'        // Silver image
-                    : ''
-                    }`}
-                    alt=""
-                    className='trader-card-image'
-                  />
-                </div>
-                <div className="trader-card-text-container">
-                  <h3 className="trader-name">{`${userData
-                    ? userData.totaldeposit > 20000
-                      ? 'Diamond'
-                      : userData.totaldeposit > 5000
-                        ? 'gold'  // Gold 
-                        : 'silver'        // Silver 
-                    : ''
-                    }`} </h3>
-                  <p className="trader-description">Rank</p>
-                </div>
+          {userData && userData.totaldeposit >= 3000 && (
+            <div className="active-trader-container">
+              <div className="videoframe-text-container treader-header">
+                <h1>Your current <span className="highlight">Plan</span></h1>
               </div>
-              <div className="trader-perfomance-container">
-                <div className="trader-performance">
-                  <div className="trader-performance-item">
-                    <p className="performance-label">capital Range</p>
-                    <p className="performance-value my-value">{`${userData
-                      ? userData.totaldeposit > 20000
-                        ? '$20,001 - unlimited' //diamond
-                        : userData.totaldeposit > 5000
-                          ? '$5001- $20,000'  // Gold 
-                          : '$0- $5,000'        // Silver 
+              <div className="traders-card active-trader-card">
+                <div className="trader-card-header">
+                  <div className="trader-card-image-container">
+  
+                    <img src={`${userData
+                      ? userData.totaldeposit >= 21000
+                        ? '/diamond.png'
+                        : userData.totaldeposit >= 11000
+                          ? '/download-removebg-preview (2).png'
+                          : '/images-removebg-preview.png'
                       : ''
-                      }`}</p>
+                      }`}
+                      alt=""
+                      className='trader-card-image'
+                    />
                   </div>
-                  <div className="trader-performance-item">
-                    <p className="performance-label">bonus</p>
-                    <p className="performance-value my-value">{`${userData
-                      ? userData.totaldeposit > 20000
-                        ? '$500' //diamond
-                        : userData.totaldeposit > 5000
-                          ? '$100'  // Gold 
-                          : '$50'   // Silver 
+                  <div className="trader-card-text-container">
+                    <h3 className="trader-name">{`${userData
+                      ? userData.totaldeposit >= 21000
+                        ? 'Diamond Plan'
+                        : userData.totaldeposit >= 11000
+                          ? 'Medium Plan'
+                          : 'Starter Plan'
                       : ''
-                      }`}</p>
+                      }`} </h3>
+                    <p className="trader-description">Plan</p>
                   </div>
                 </div>
+                <div className="trader-perfomance-container">
+                  <div className="trader-performance">
+                    <div className="trader-performance-item">
+                      <p className="performance-label">capital Range</p>
+                      <p className="performance-value my-value">{`${userData
+                        ? userData.totaldeposit >= 21000
+                          ? '$21,000 - $100,000'
+                          : userData.totaldeposit >= 11000
+                            ? '$11,000 - $20,999'
+                            : '$3,000 - $10,999'
+                        : ''
+                        }`}</p>
+                    </div>
+                    <div className="trader-performance-item">
+                      <p className="performance-label">leverage</p>
+                      <p className="performance-value my-value">{`${userData
+                        ? userData.totaldeposit >= 21000
+                          ? 'up to 1:100'
+                          : userData.totaldeposit >= 11000
+                            ? 'up to 1:50'
+                            : 'up to 1:20'
+                        : ''
+                        }`}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
         {/* {userData && dailyTrades.length !== 0 ?
           <div className="page-swiper-wrapper trans-page">

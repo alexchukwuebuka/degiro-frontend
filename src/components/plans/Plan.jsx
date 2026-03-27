@@ -7,8 +7,8 @@ const Plan = () => {
     const [withdrawMethods,setWithdrawalMethods] = useState([
       {
         id:1,
-        min:'1000',
-        max:'4,999',      
+        min:'3,000',
+        max:'10,999',      
         type:'starter plan',
         minimumOrder:'0.1',
         maximumOrder: '10',
@@ -16,8 +16,8 @@ const Plan = () => {
       },
       {
         id:2,
-        min:'5,000',
-        max:'19,999',
+        min:'11,000',
+        max:'20,999',
         type:'medium plan',
         minimumOrder:'0.1',
         maximumOrder: '15',
@@ -25,24 +25,14 @@ const Plan = () => {
       },
       {
         id:3,
-        min:'20,000',
-        max:'49,999',
-        type:'classic plan',
-        minimumOrder:'0.1',
-        maximumOrder: '20',
-        leverage:'1:80'
-      },
-      {
-        id:4,
-        min:'50,000',
-        max:'99,000',
+        min:'21,000',
+        max:'100,000',
         type:'diamond plan',
         minimumOrder:'0.1',
         maximumOrder: '25',
         leverage:'1:100'
-      },
-      
-      ])
+      }
+    ])
   return (
     <div className='plan-section'>
       <div className="videoframe-text-container" data-aos="fade-up">
@@ -56,7 +46,7 @@ const Plan = () => {
               <div class="pack-container" key={withdrawmethod.id} data-aos="fade-up">
             <div class="pack-header">
                   <h3>{withdrawmethod.type}</h3>
-                  <h2>$ {withdrawmethod.min}</h2>
+                  <h2>$ {withdrawmethod.min} - {withdrawmethod.max}</h2>
                   <button className='plan-card-btn' onClick={()=>navigate('/signup')}>
                     <p>Subscribe</p>
                     <svg

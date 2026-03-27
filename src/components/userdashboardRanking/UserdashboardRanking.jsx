@@ -86,71 +86,73 @@ const UserdashboardRanking = ({ route }) => {
           </div>
         </div>
         <div className="current-rank-section">
-          <div className="active-trader-container">
-            <div className="videoframe-text-container treader-header">
-              <h1>Your current <span className="highlight">Rank</span></h1>
-            </div>
-            <div className="traders-card active-trader-card">
-              <div className="trader-card-header">
-                <div className="trader-card-image-container">
-                  <img
-                    src={`${userData
-                        ? userData.totaldeposit > 20000
-                          ? '/diamond.png'
-                          : userData.totaldeposit > 5000
-                            ? '/download-removebg-preview (2).png'  // Gold image
-                            : '/images-removebg-preview.png'        // Silver image
-                        : ''
-                      }`}
-                    alt=""
-                    className='trader-card-image'
-                  />
-
-                  <div className="trader-card-text-container">
-                    <h3 className="trader-name">
-                      {userData
-                        ? userData.totaldeposit > 20000
-                          ? "diamond"
-                          : userData.totaldeposit > 5000
-                            ? "gold"
-                            : "silver"
-                        : ""}
-                    </h3>
-                  </div>
-
-                </div>
+          {userData && userData.totaldeposit >= 3000 && (
+            <div className="active-trader-container">
+              <div className="videoframe-text-container treader-header">
+                <h1>Your current <span className="highlight">Plan</span></h1>
               </div>
-              <div className="trader-perfomance-container">
-                <div className="trader-performance">
-                  <div className="trader-performance-item">
-                    <p className="performance-label">capital Range</p>
-                    <p className="performance-value my-value">{`${userData
-                        ? userData.totaldeposit > 20000
-                          ? '$20,001 - unlimited' //diamond
-                          : userData.totaldeposit > 5000
-                            ? '$5001- $20,000'  // Gold 
-                            : '$0- $5,000'        // Silver 
-                        : ''
-                      }`}</p>
-                  </div>
-                  <div className="trader-performance-item">
-                    <p className="performance-label">bonus</p>
-                    <p className="performance-value my-value"> {`${userData
-                        ? userData.totaldeposit > 20000
-                          ? '$500' //diamond
-                          : userData.totaldeposit > 5000
-                            ? '$100'  // Gold 
-                            : '$50'        // Silver 
-                        : ''
-                      }`}</p>
+              <div className="traders-card active-trader-card">
+                <div className="trader-card-header">
+                  <div className="trader-card-image-container">
+                    <img
+                      src={`${userData
+                          ? userData.totaldeposit >= 21000
+                            ? '/diamond.png'
+                            : userData.totaldeposit >= 11000
+                              ? '/download-removebg-preview (2).png'
+                              : '/images-removebg-preview.png'
+                          : ''
+                        }`}
+                      alt=""
+                      className='trader-card-image'
+                    />
+  
+                    <div className="trader-card-text-container">
+                      <h3 className="trader-name">
+                        {userData
+                          ? userData.totaldeposit >= 21000
+                            ? "Diamond Plan"
+                            : userData.totaldeposit >= 11000
+                              ? "Medium Plan"
+                              : "Starter Plan"
+                          : ""}
+                      </h3>
+                    </div>
+  
                   </div>
                 </div>
+                <div className="trader-perfomance-container">
+                  <div className="trader-performance">
+                    <div className="trader-performance-item">
+                      <p className="performance-label">capital Range</p>
+                      <p className="performance-value my-value">{`${userData
+                          ? userData.totaldeposit >= 21000
+                            ? '$21,000 - $100,000'
+                            : userData.totaldeposit >= 11000
+                              ? '$11,000 - $20,999'
+                              : '$3,000 - $10,999'
+                          : ''
+                        }`}</p>
+                    </div>
+                    <div className="trader-performance-item">
+                      <p className="performance-label">leverage</p>
+                      <p className="performance-value my-value"> {`${userData
+                          ? userData.totaldeposit >= 21000
+                            ? 'up to 1:100'
+                            : userData.totaldeposit >= 11000
+                              ? 'up to 1:50'
+                              : 'up to 1:20'
+                          : ''
+                        }`}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
         <div className="videoframe-text-container treader-header">
-          <h1>other <span className="highlight">Ranks</span></h1>
+          <h1>other <span className="highlight">Plans</span></h1>
         </div>
         <div className="traders-card-container rank-plan-container">
           <div className="traders-card">
@@ -159,19 +161,19 @@ const UserdashboardRanking = ({ route }) => {
                 <img src={`/images-removebg-preview.png`} alt="" className='trader-card-image' />
               </div>
               <div className="trader-card-text-container">
-                <h3 className="trader-name">silver</h3>
-                <p className="trader-description">Rank</p>
+                <h3 className="trader-name">Starter Plan</h3>
+                <p className="trader-description">Plan</p>
               </div>
             </div>
             <div className="trader-perfomance-container">
               <div className="trader-performance">
                 <div className="trader-performance-item">
                   <p className="performance-label">capital Range</p>
-                  <p className="performance-value my-value"> $0- $5,000</p>
+                  <p className="performance-value my-value"> $3,000 - $10,999</p>
                 </div>
                 <div className="trader-performance-item">
-                  <p className="performance-label">bonus</p>
-                  <p className="performance-value my-value"> $50</p>
+                  <p className="performance-label">leverage</p>
+                  <p className="performance-value my-value"> up to 1:20</p>
                 </div>
               </div>
               <div className="trader-performance-btn-container">
@@ -185,19 +187,19 @@ const UserdashboardRanking = ({ route }) => {
                 <img src={`/download-removebg-preview (2).png`} alt="" className='trader-card-image' />
               </div>
               <div className="trader-card-text-container">
-                <h3 className="trader-name">Gold</h3>
-                <p className="trader-description">Rank</p>
+                <h3 className="trader-name">Medium Plan</h3>
+                <p className="trader-description">Plan</p>
               </div>
             </div>
             <div className="trader-perfomance-container">
               <div className="trader-performance">
                 <div className="trader-performance-item">
                   <p className="performance-label">capital Range</p>
-                  <p className="performance-value my-value"> $5,001- $20,000</p>
+                  <p className="performance-value my-value"> $11,000 - $20,999</p>
                 </div>
                 <div className="trader-performance-item">
-                  <p className="performance-label">bonus</p>
-                  <p className="performance-value my-value"> $100</p>
+                  <p className="performance-label">leverage</p>
+                  <p className="performance-value my-value"> up to 1:50</p>
                 </div>
               </div>
               <div className="trader-performance-btn-container">
@@ -211,19 +213,19 @@ const UserdashboardRanking = ({ route }) => {
                 <img src={`/diamond.png`} alt="" className='trader-card-image' />
               </div>
               <div className="trader-card-text-container">
-                <h3 className="trader-name">diamond</h3>
-                <p className="trader-description">Rank</p>
+                <h3 className="trader-name">Diamond Plan</h3>
+                <p className="trader-description">Plan</p>
               </div>
             </div>
             <div className="trader-perfomance-container">
               <div className="trader-performance">
                 <div className="trader-performance-item">
                   <p className="performance-label">capital Range</p>
-                  <p className="performance-value my-value"> $20,001- $50,000</p>
+                  <p className="performance-value my-value"> $21,000 - $100,000</p>
                 </div>
                 <div className="trader-performance-item">
-                  <p className="performance-label">bonus</p>
-                  <p className="performance-value my-value" > $500</p>
+                  <p className="performance-label">leverage</p>
+                  <p className="performance-value my-value" > up to 1:100</p>
                 </div>
               </div>
               <div className="trader-performance-btn-container">

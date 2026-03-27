@@ -65,7 +65,7 @@ const MobileDropdown = ({ route, showStatus, closeMenu }) => {
                     <div className="dropdown-deposit-container">
                         <h3>total amount</h3>
                         <h2>${userData ? userData.funded : ''} USD</h2>
-                        <p>Trading Rank :   {userData && userData.totaldeposit >= 5000 ? "Gold" : 'Silver'}</p>
+                        <p>Trading Plan :   {userData && userData.totaldeposit >= 21000 ? "Diamond" : userData && userData.totaldeposit >= 11000 ? "Medium" : userData && userData.totaldeposit >= 3000 ? "Starter" : "None"}</p>
                     </div>
                     <div className="mobile-tabs">
                         <div className="dropdown-tabs" onClick={() => {
@@ -108,7 +108,7 @@ const MobileDropdown = ({ route, showStatus, closeMenu }) => {
                             navigate('/ranking')
                         }}>
                             <FiAward />
-                            <p>Ranking</p>
+                            <p>Plans</p>
                         </div>
                         <div className="dropdown-tabs" onClick={() => {
                             navigate('/withdraw')
