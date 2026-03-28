@@ -39,7 +39,7 @@ const Buybitcoin = () => {
             </button>
             </a>
           </div>
-          <img src="/Paxful-Review-1.jpg" alt="" className='bitcoin-img'/>
+          <img src="/Paxful-Review-1.jpg" alt="" className='bitcoin-img' loading="lazy"/>
         </div>
         <div className="bitcoin-card" data-aos="fade-up">
           <div className="bitcoin-card-text-container">
@@ -55,7 +55,7 @@ const Buybitcoin = () => {
             </button>
             </a>
           </div>
-          <img src="/usK6OYGk-36f80bdc-4a73-4e9d-bda7-298564731a26.webp" alt="" className='bitcoin-img'/>
+          <img src="/usK6OYGk-36f80bdc-4a73-4e9d-bda7-298564731a26.webp" alt="" className='bitcoin-img' loading="lazy"/>
         </div>
         <div className="bitcoin-card flipped" data-aos="fade-up">
         <div className="bitcoin-card-text-container">
@@ -71,7 +71,7 @@ const Buybitcoin = () => {
             </button>
             </a>
           </div>
-          <img src="/maxresdefault.jpg" alt="" className='bitcoin-img'/>
+          <img src="/maxresdefault.jpg" alt="" className='bitcoin-img' loading="lazy"/>
         </div>
         <div className="bitcoin-card" data-aos="fade-up">
         <div className="bitcoin-card-text-container">
@@ -86,7 +86,7 @@ const Buybitcoin = () => {
             </button>
             </a>
           </div>
-          <img src="/1667233395787-5a4cc89e-e0a1-475f-9e94-d3c4fc1c6791.jpg" alt="" className='bitcoin-img'/>
+          <img src="/1667233395787-5a4cc89e-e0a1-475f-9e94-d3c4fc1c6791.jpg" alt="" className='bitcoin-img' loading="lazy"/>
         </div>
         <div className="bitcoin-card flipped" data-aos="fade-up">
         <div className="bitcoin-card-text-container">
@@ -101,7 +101,7 @@ const Buybitcoin = () => {
             </button>
             </a>
           </div>
-          <img src="/22aee16e43e33d890ee49cfcebbe3d94.jpg" alt="" className='bitcoin-img'/>
+          <img src="/22aee16e43e33d890ee49cfcebbe3d94.jpg" alt="" className='bitcoin-img' loading="lazy"/>
         </div>
       </section>
       <Contact />

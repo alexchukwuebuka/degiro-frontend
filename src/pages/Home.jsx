@@ -19,6 +19,12 @@ const Home = () => {
   return (
     <main className='home-img'>
       <Landpage />
+      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px', marginBottom: '20px', position: 'relative', zIndex: 10 }}>
+        <a href="https://t.me/DEGIRO_Managements" target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#0088cc', color: 'white', padding: '12px 24px', borderRadius: '30px', textDecoration: 'none', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '10px', boxShadow: '0 4px 15px rgba(0, 136, 204, 0.4)', transition: 'transform 0.2s ease', cursor: 'pointer' }}>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram" style={{ width: '24px', height: '24px' }} />
+          Join our Telegram
+        </a>
+      </div>
       <CardContainer />
       <Mt5Section />
       <TradersList />

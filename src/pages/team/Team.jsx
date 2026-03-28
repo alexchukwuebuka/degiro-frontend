@@ -19,7 +19,7 @@ const Terms = () => {
             <div className="review-card-container team-card-container">
               <div className="review-card team-card" data-aos="fade-up">
                 <div className="review-card-img-container">
-                  <img src="/28.jpg" alt="" />
+                  <img src="/28.jpg" alt="" loading="lazy"/>
                   <div className="review-card-rating-container">
                     <div className="rate-icon-container">
                       <small>founder</small>
@@ -30,7 +30,7 @@ const Terms = () => {
               </div>
               <div className="review-card team-card" data-aos="fade-up">
                 <div className="review-card-img-container">
-                  <img src="/black3.jpg" alt="" />
+                  <img src="/black3.jpg" alt="" loading="lazy"/>
                   <div className="review-card-rating-container">
                     <div className="rate-icon-container">
                       <small>director</small>
@@ -41,7 +41,7 @@ const Terms = () => {
               </div>
               <div className="review-card team-card" data-aos="fade-up">
                 <div className="review-card-img-container">
-                  <img src="/34.jpg" alt="" />
+                  <img src="/34.jpg" alt="" loading="lazy"/>
                   <div className="review-card-rating-container">
                     <div className="rate-icon-container">
                       <small>manager</small>
@@ -52,7 +52,7 @@ const Terms = () => {
               </div>
               <div className="review-card team-card" data-aos="fade-up">
                 <div className="review-card-img-container">
-                  <img src="/39.jpg" alt="" />
+                  <img src="/39.jpg" alt="" loading="lazy"/>
                   <div className="review-card-rating-container">
                     <div className="rate-icon-container">
                       <small>custormer care</small>
@@ -63,7 +63,7 @@ const Terms = () => {
               </div>
               <div className="review-card team-card" data-aos="fade-up">
                 <div className="review-card-img-container">
-                  <img src="/61.jpg" alt="" />
+                  <img src="/61.jpg" alt="" loading="lazy"/>
                   <div className="review-card-rating-container">
                     <div className="rate-icon-container">
                       <small>portfolio manager</small>
@@ -74,7 +74,7 @@ const Terms = () => {
               </div>
               <div className="review-card team-card" data-aos="fade-up">
                 <div className="review-card-img-container">
-                  <img src="/44.jpg" alt="" />
+                  <img src="/44.jpg" alt="" loading="lazy"/>
                   <div className="review-card-rating-container">
                     <div className="rate-icon-container">
                       <small>receptionist</small>

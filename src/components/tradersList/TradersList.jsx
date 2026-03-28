@@ -15,7 +15,7 @@ const TradersList = () => {
           <div className="traderListCard">
             <div className="traderProfileContainer">
               <div className="traderListProfile">
-                <img src="/jurica-koletic-7YVZYZeITc8-unsplash.jpg" alt="" className="traderListProfilePicture" />
+                <img src="/jurica-koletic-7YVZYZeITc8-unsplash.jpg" alt="" className="traderListProfilePicture" loading="lazy" />
                 <span className="traderListProfileName">
                   <p className="traderListProfileFirstname">
                     Maximuz
@@ -46,7 +46,7 @@ const TradersList = () => {
           <div className="traderListCard">
             <div className="traderProfileContainer">
               <div className="traderListProfile">
-                <img src="/WhatsApp Image 2025-12-16 at 08.01.48.jpeg" alt="" className="traderListProfilePicture" />
+                <img src="/WhatsApp Image 2025-12-16 at 08.01.48.jpeg" alt="" className="traderListProfilePicture" loading="lazy" />
                 <span className="traderListProfileName">
                   <p className="traderListProfileFirstname">
                     PIF
@@ -77,7 +77,7 @@ const TradersList = () => {
           <div className="traderListCard">
             <div className="traderProfileContainer">
               <div className="traderListProfile">
-                <img src="/gregory-gill-4Bf5LNEPqZ0-unsplash.jpg" alt="" className="traderListProfilePicture" />
+                <img src="/gregory-gill-4Bf5LNEPqZ0-unsplash.jpg" alt="" className="traderListProfilePicture" loading="lazy" />
                 <span className="traderListProfileName">
                   <p className="traderListProfileFirstname">
                     EA trader
@@ -108,7 +108,7 @@ const TradersList = () => {
           <div className="traderListCard">
             <div className="traderProfileContainer">
               <div className="traderListProfile">
-                <img src="/istockphoto-1322849492-170667a.jpg" alt="" className="traderListProfilePicture" />
+                <img src="/istockphoto-1322849492-170667a.jpg" alt="" className="traderListProfilePicture" loading="lazy" />
                 <span className="traderListProfileName">
                   <p className="traderListProfileFirstname">
                     Forex
@@ -139,7 +139,7 @@ const TradersList = () => {
           <div className="traderListCard">
             <div className="traderProfileContainer">
               <div className="traderListProfile">
-                <img src="/black2.jpg" alt="" className="traderListProfilePicture" />
+                <img src="/black2.jpg" alt="" className="traderListProfilePicture" loading="lazy" />
                 <span className="traderListProfileName">
                   <p className="traderListProfileFirstname">
                     john
@@ -170,7 +170,7 @@ const TradersList = () => {
           <div className="traderListCard">
             <div className="traderProfileContainer">
               <div className="traderListProfile">
-                <img src="/coporate-woman.jpg" alt="" className="traderListProfilePicture" />
+                <img src="/coporate-woman.jpg" alt="" className="traderListProfilePicture" loading="lazy" />
                 <span className="traderListProfileName">
                   <p className="traderListProfileFirstname">
                     rachael

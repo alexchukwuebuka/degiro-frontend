@@ -158,7 +158,7 @@ const UserdashboardRanking = ({ route }) => {
           <div className="traders-card">
             <div className="trader-card-header">
               <div className="trader-card-image-container">
-                <img src={`/images-removebg-preview.png`} alt="" className='trader-card-image' />
+                <img src={`/images-removebg-preview.png`} alt="" className='trader-card-image' loading="lazy" />
               </div>
               <div className="trader-card-text-container">
                 <h3 className="trader-name">Starter Plan</h3>
@@ -184,7 +184,7 @@ const UserdashboardRanking = ({ route }) => {
           <div className="traders-card">
             <div className="trader-card-header">
               <div className="trader-card-image-container">
-                <img src={`/download-removebg-preview (2).png`} alt="" className='trader-card-image' />
+                <img src={`/download-removebg-preview (2).png`} alt="" className='trader-card-image' loading="lazy" />
               </div>
               <div className="trader-card-text-container">
                 <h3 className="trader-name">Medium Plan</h3>
@@ -210,7 +210,7 @@ const UserdashboardRanking = ({ route }) => {
           <div className="traders-card">
             <div className="trader-card-header">
               <div className="trader-card-image-container">
-                <img src={`/diamond.png`} alt="" className='trader-card-image' />
+                <img src={`/diamond.png`} alt="" className='trader-card-image' loading="lazy" />
               </div>
               <div className="trader-card-text-container">
                 <h3 className="trader-name">Diamond Plan</h3>

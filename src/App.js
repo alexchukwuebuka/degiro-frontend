@@ -1,51 +1,52 @@
-import { useEffect } from 'react';
+import { useEffect, Suspense, lazy } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Login from './pages/Login'
-import Home from './pages/Home';
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import Signup from './pages/Signup';
-import Userdashboard from './pages/Userdashboard'
-import Userdashboardfundaccount from './components/userdashboardfundaccount/Userdashboardfundaccount'
-import Userdashboardwithdraw from './components/userdashboardwithdraw/Userdashboardwithdraw';
-import Userdashboardreferrals from './components/userdashboardreferrals/Userdashboardreferrals';
-import Userdashboardplans from './components/userdashboardplans/Userdashboardplans';
-import Userdashboardtransactions from './components/userdashboardtransactions/Userdashboardtransactions';
-import Investments from './components/invesments/Investments';
-import Profile from './components/profile/Profile'
-import UserdashboardSettings from './components/userdasboardSettings/UserdashboardSettings';
-import VerifyEmail from './pages/VerifyEmail';
-import WithdrawalLogs from './components/WithdrawalLogs';
-import Checkout from './components/Checkout';
-import Admindashboard from './components/admindashboard/Admindashboard';
-import Deposit from './components/deposit/Deposit';
-import Aboutpage from './pages/Aboutpage';
-import Faq from './pages/Faq';
-import Buybitcoin from './pages/Buybitcoin';
-import Policy from './pages/Policy';
 import './App.css'
-import CopytradePage from './pages/copytrade/CopytradePage';
-import Forex from './pages/forex/Forex';
-import Indices from './pages/indices/Indices';
-import Futures from './pages/futures/Futures';
-import Stocks from './pages/stocks/Stocks';
-import News from './pages/news/News';
-import TechnicalAnalysisPage from './pages/technicalAnalysis/TechnicalAnalysisPage'
-import Heatmaps from './pages/heatmaps/Heatmaps';
-import Watchlist from './pages/watchlist/Watchlist';
-import Team from './pages/team/Team'
-import UserdashboardCopytrade from './components/userdashboardCopytrade/UserdashboardCopytrade';
-import UserdashboardKyc from './components/userdashboardKyc/UserdashboardKyc';
-import UserdashboardLiveTrading from './components/userdashboardLiveTrading/UserdashboardLiveTrading';
-import UserdashboardRanking from './components/userdashboardRanking/UserdashboardRanking';
-import UserdashboardTraders from './components/userdashboardTraders/UserdashboardTraders';
-import Verify from './pages/verifyPage/Verify';
-import PasswordReset from './components/passwordreset/PasswordReset';
-import ForgotPassword from './components/forgotpassword/ForgotPassword';
-import Commodities from './pages/commodities/Commodities';
-import Bonds from './pages/bonds/Bonds';
-import Options from './pages/options/Options';
+
+const Login = lazy(() => import('./pages/Login'));
+const Home = lazy(() => import('./pages/Home'));
+const Signup = lazy(() => import('./pages/Signup'));
+const Userdashboard = lazy(() => import('./pages/Userdashboard'));
+const Userdashboardfundaccount = lazy(() => import('./components/userdashboardfundaccount/Userdashboardfundaccount'));
+const Userdashboardwithdraw = lazy(() => import('./components/userdashboardwithdraw/Userdashboardwithdraw'));
+const Userdashboardreferrals = lazy(() => import('./components/userdashboardreferrals/Userdashboardreferrals'));
+const Userdashboardplans = lazy(() => import('./components/userdashboardplans/Userdashboardplans'));
+const Userdashboardtransactions = lazy(() => import('./components/userdashboardtransactions/Userdashboardtransactions'));
+const Investments = lazy(() => import('./components/invesments/Investments'));
+const Profile = lazy(() => import('./components/profile/Profile'));
+const UserdashboardSettings = lazy(() => import('./components/userdasboardSettings/UserdashboardSettings'));
+const VerifyEmail = lazy(() => import('./pages/VerifyEmail'));
+const WithdrawalLogs = lazy(() => import('./components/WithdrawalLogs'));
+const Checkout = lazy(() => import('./components/Checkout'));
+const Admindashboard = lazy(() => import('./components/admindashboard/Admindashboard'));
+const Deposit = lazy(() => import('./components/deposit/Deposit'));
+const Aboutpage = lazy(() => import('./pages/Aboutpage'));
+const Faq = lazy(() => import('./pages/Faq'));
+const Buybitcoin = lazy(() => import('./pages/Buybitcoin'));
+const Policy = lazy(() => import('./pages/Policy'));
+const CopytradePage = lazy(() => import('./pages/copytrade/CopytradePage'));
+const Forex = lazy(() => import('./pages/forex/Forex'));
+const Indices = lazy(() => import('./pages/indices/Indices'));
+const Futures = lazy(() => import('./pages/futures/Futures'));
+const Stocks = lazy(() => import('./pages/stocks/Stocks'));
+const News = lazy(() => import('./pages/news/News'));
+const TechnicalAnalysisPage = lazy(() => import('./pages/technicalAnalysis/TechnicalAnalysisPage'));
+const Heatmaps = lazy(() => import('./pages/heatmaps/Heatmaps'));
+const Watchlist = lazy(() => import('./pages/watchlist/Watchlist'));
+const Team = lazy(() => import('./pages/team/Team'));
+const UserdashboardCopytrade = lazy(() => import('./components/userdashboardCopytrade/UserdashboardCopytrade'));
+const UserdashboardKyc = lazy(() => import('./components/userdashboardKyc/UserdashboardKyc'));
+const UserdashboardLiveTrading = lazy(() => import('./components/userdashboardLiveTrading/UserdashboardLiveTrading'));
+const UserdashboardRanking = lazy(() => import('./components/userdashboardRanking/UserdashboardRanking'));
+const UserdashboardTraders = lazy(() => import('./components/userdashboardTraders/UserdashboardTraders'));
+const Verify = lazy(() => import('./pages/verifyPage/Verify'));
+const PasswordReset = lazy(() => import('./components/passwordreset/PasswordReset'));
+const ForgotPassword = lazy(() => import('./components/forgotpassword/ForgotPassword'));
+const Commodities = lazy(() => import('./pages/commodities/Commodities'));
+const Bonds = lazy(() => import('./pages/bonds/Bonds'));
+const Options = lazy(() => import('./pages/options/Options'));
 
 function App() {
   useEffect(() => {
@@ -85,50 +86,52 @@ function App() {
               }
             }}
           >
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/login' element={<Login route={route} />} />
-              <Route path='/signup' element={<Signup route={route} />} />
-              <Route path='/dashboard' element={<Userdashboard route={route} />} />
-              <Route path='/fundwallet' element={<Userdashboardfundaccount route={route} />} />
-              <Route path='/referrals' element={<Userdashboardreferrals route={route} />} />
-              <Route path='/withdraw' element={<Userdashboardwithdraw route={route} />} />
-              <Route path='/plans' element={<Userdashboardplans route={route} />} />
-              <Route path='/transactions' element={<Userdashboardtransactions route={route} />} />
-              <Route path='/investments' element={<Investments route={route} />} />
-              <Route path='/settings' element={<UserdashboardSettings route={route} />} />
-              <Route path='/user/:id' element={<VerifyEmail route={route} />} />
-              <Route path='/withdrawlogs' element={<WithdrawalLogs route={route} />} />
-              <Route path='/checkout' element={<Checkout route={route} />} />
-              <Route path='/admin' element={<Admindashboard route={route} />} />
-              <Route path='/deposit' element={<Deposit route={route} />} />
-              <Route path='/about' element={<Aboutpage />} />
-              <Route path='/faq' element={<Faq />} />
-              <Route path='/privacy-policy' element={<Policy />} />
-              <Route path='/buy-crypto' element={<Buybitcoin />} />
-              <Route path='/forex' element={<Forex />} />
-              <Route path='/futures' element={<Futures />} />
-              <Route path='/indices' element={<Indices />} />
-              <Route path='/stocks' element={<Stocks />} />
-              <Route path='/news' element={<News />} />
-              <Route path='/technical-analysis' element={<TechnicalAnalysisPage />} />
-              <Route path='/heatmaps' element={<Heatmaps />} />
-              <Route path='/watchlists' element={<Watchlist />} />
-              <Route path='/copytrade' element={<CopytradePage />} />
-              <Route path='/team' element={<Team />} />
-              <Route path='/usercopytrade' element={<UserdashboardCopytrade route={route} />} />
-              <Route path='/traders' element={<UserdashboardTraders route={route} />} />
-              <Route path='/live-trading' element={<UserdashboardLiveTrading route={route} />} />
-              <Route path='/ranking' element={<UserdashboardRanking route={route} />} />
-              <Route path='/kyc' element={<UserdashboardKyc route={route} />} />
-              <Route path='/verify' element={<Verify />} />
-              <Route path=':id/verify/:token' element={<VerifyEmail route={route} />} />
-              <Route path='/passwordreset' element={<ForgotPassword route={route} />} />
-              <Route path='/resetpassword/:email' element={<PasswordReset route={route} />} />
-              <Route path='/bonds' element={<Bonds />} />
-              <Route path='/options' element={<Options />} />
-              <Route path='/commodities' element={<Commodities />} />
-            </Routes>
+            <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', width: '100vw' }}><div style={{ color: '#0052FF', fontSize: '1.2rem', fontWeight: 'bold' }}>Loading...</div></div>}>
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/login' element={<Login route={route} />} />
+                <Route path='/signup' element={<Signup route={route} />} />
+                <Route path='/dashboard' element={<Userdashboard route={route} />} />
+                <Route path='/fundwallet' element={<Userdashboardfundaccount route={route} />} />
+                <Route path='/referrals' element={<Userdashboardreferrals route={route} />} />
+                <Route path='/withdraw' element={<Userdashboardwithdraw route={route} />} />
+                <Route path='/plans' element={<Userdashboardplans route={route} />} />
+                <Route path='/transactions' element={<Userdashboardtransactions route={route} />} />
+                <Route path='/investments' element={<Investments route={route} />} />
+                <Route path='/settings' element={<UserdashboardSettings route={route} />} />
+                <Route path='/user/:id' element={<VerifyEmail route={route} />} />
+                <Route path='/withdrawlogs' element={<WithdrawalLogs route={route} />} />
+                <Route path='/checkout' element={<Checkout route={route} />} />
+                <Route path='/admin' element={<Admindashboard route={route} />} />
+                <Route path='/deposit' element={<Deposit route={route} />} />
+                <Route path='/about' element={<Aboutpage />} />
+                <Route path='/faq' element={<Faq />} />
+                <Route path='/privacy-policy' element={<Policy />} />
+                <Route path='/buy-crypto' element={<Buybitcoin />} />
+                <Route path='/forex' element={<Forex />} />
+                <Route path='/futures' element={<Futures />} />
+                <Route path='/indices' element={<Indices />} />
+                <Route path='/stocks' element={<Stocks />} />
+                <Route path='/news' element={<News />} />
+                <Route path='/technical-analysis' element={<TechnicalAnalysisPage />} />
+                <Route path='/heatmaps' element={<Heatmaps />} />
+                <Route path='/watchlists' element={<Watchlist />} />
+                <Route path='/copytrade' element={<CopytradePage />} />
+                <Route path='/team' element={<Team />} />
+                <Route path='/usercopytrade' element={<UserdashboardCopytrade route={route} />} />
+                <Route path='/traders' element={<UserdashboardTraders route={route} />} />
+                <Route path='/live-trading' element={<UserdashboardLiveTrading route={route} />} />
+                <Route path='/ranking' element={<UserdashboardRanking route={route} />} />
+                <Route path='/kyc' element={<UserdashboardKyc route={route} />} />
+                <Route path='/verify' element={<Verify />} />
+                <Route path=':id/verify/:token' element={<VerifyEmail route={route} />} />
+                <Route path='/passwordreset' element={<ForgotPassword route={route} />} />
+                <Route path='/resetpassword/:email' element={<PasswordReset route={route} />} />
+                <Route path='/bonds' element={<Bonds />} />
+                <Route path='/options' element={<Options />} />
+                <Route path='/commodities' element={<Commodities />} />
+              </Routes>
+            </Suspense>
           </motion.div>
         </Router>
       </AnimatePresence>
