@@ -37,9 +37,9 @@ const Contact = () => {
                         Keizersgracht 555, 1017 DR Amsterdam, Netherlands
                     </p>
                     <div className="contact-card" data-aos="fade-up">
-                        {/* <a href='https://t.me/+HqNYmvaCKL9hNmU0' className="ball contact-ball" target='blank'>
-                    <FaTelegramPlane />
-                </a> */}
+                        {/* <a href='https://t.me/+5ypE0rXU3rEzNWFk' className="ball contact-ball" target='blank'>
+                            <FaTelegramPlane />
+                        </a> */}
                         <a href='mailto:degiromanagements@gmail.com' className="ball contact-ball" target='blank'>
                             <FiMail />
                         </a>
