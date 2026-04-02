@@ -1,7 +1,7 @@
 import React from 'react'
 import './contact.css'
 import { BsFillWalletFill, BsWhatsapp } from 'react-icons/bs'
-import { FaPhone, FaTelegramPlane } from 'react-icons/fa'
+import { FaPhone, FaTelegramPlane, FaFacebookF } from 'react-icons/fa'
 import { AiOutlineMail } from 'react-icons/ai'
 import { FiMail } from 'react-icons/fi'
 import Swal from 'sweetalert2'
@@ -45,6 +45,9 @@ const Contact = () => {
                         </a>
                         <a href="https://wa.me/19455997111" className="ball contact-ball" target='blank'>
                             <BsWhatsapp />
+                        </a>
+                        <a href="https://www.facebook.com/share/1CxTGVWiY3/" className="ball contact-ball" target='blank'>
+                            <FaFacebookF />
                         </a>
                         {/* <a href="https://api.whatsapp.com/send?phone=447529602972"className="ball contact-ball" target='blank'>
                     <BsWhatsapp />
