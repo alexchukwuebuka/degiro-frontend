@@ -1034,6 +1034,12 @@ const Admindashboard = ({ route }) => {
                           <option value="DIS">DIS (Disney)</option>
                           <option value="KO">KO (Coca-Cola)</option>
                           <option value="NKE">NKE (Nike)</option>
+                          <option value="ASML">ASML</option>
+                          <option value="TSM">TSM (TSMC)</option>
+                          <option value="LLY">LLY (Eli Lilly)</option>
+                          <option value="JNJ">JNJ (Johnson & Johnson)</option>
+                          <option value="AVGO">AVGO (Broadcom)</option>
+                          <option value="PG">PG (Procter & Gamble)</option>
                         </optgroup>
                       </select>
                     </div>
@@ -1250,6 +1256,12 @@ const Admindashboard = ({ route }) => {
                           <option value="DIS">DIS (Disney)</option>
                           <option value="KO">KO (Coca-Cola)</option>
                           <option value="NKE">NKE (Nike)</option>
+                          <option value="ASML">ASML</option>
+                          <option value="TSM">TSM (TSMC)</option>
+                          <option value="LLY">LLY (Eli Lilly)</option>
+                          <option value="JNJ">JNJ (Johnson & Johnson)</option>
+                          <option value="AVGO">AVGO (Broadcom)</option>
+                          <option value="PG">PG (Procter & Gamble)</option>
                         </optgroup>
 
                       </select>
