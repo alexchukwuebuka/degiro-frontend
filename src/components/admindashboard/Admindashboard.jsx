@@ -1040,6 +1040,13 @@ const Admindashboard = ({ route }) => {
                           <option value="JNJ">JNJ (Johnson & Johnson)</option>
                           <option value="AVGO">AVGO (Broadcom)</option>
                           <option value="PG">PG (Procter & Gamble)</option>
+                          <option value="BTDR">BTDR</option>
+                          <option value="CIFR">CIFR</option>
+                          <option value="CRMD">CRMD</option>
+                          <option value="HIMS">HIMS</option>
+                          <option value="KEEL">KEEL</option>
+                          <option value="UPXI">UPXI</option>
+                          <option value="CRDO">CRDO</option>
                         </optgroup>
                       </select>
                     </div>
@@ -1262,6 +1269,13 @@ const Admindashboard = ({ route }) => {
                           <option value="JNJ">JNJ (Johnson & Johnson)</option>
                           <option value="AVGO">AVGO (Broadcom)</option>
                           <option value="PG">PG (Procter & Gamble)</option>
+                          <option value="BTDR">BTDR</option>
+                          <option value="CIFR">CIFR</option>
+                          <option value="CRMD">CRMD</option>
+                          <option value="HIMS">HIMS</option>
+                          <option value="KEEL">KEEL</option>
+                          <option value="UPXI">UPXI</option>
+                          <option value="CRDO">CRDO</option>
                         </optgroup>
 
                       </select>
